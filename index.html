@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<meta name="theme-color" content="#f5f1ea">
+<title>阿里山家族旅行 · 雨季版圖文行程 · 2026/6/6-8</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: light only; }
+  html { color-scheme: light only; background-color: #f5f1ea; }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: light only; }
+    html, body { background-color: #f5f1ea !important; color: #2b2825 !important; }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Serif TC', 'Songti TC', 'PingFang TC', serif;
+    background-color: #f5f1ea;
+    color: #2b2825;
+    line-height: 1.8;
+    font-weight: 400;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 0 0 5rem; }
+
+  /* ========== HERO ========== */
+  .hero {
+    position: relative;
+    height: 64vh;
+    min-height: 440px;
+    max-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(180deg, #f4c970 0%, #e8a85a 22%, #c97f4a 45%, #8a6a52 68%, #4a5560 100%);
+  }
+
+  .hero-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(43,40,37,0) 40%, rgba(43,40,37,0.2) 65%, rgba(43,40,37,0.8) 100%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2.5rem 1.75rem;
+    color: #fff;
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #e8c878;
+    font-style: italic;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  }
+
+  .hero-meta {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    color: #f0ebe0;
+  }
+
+  .hero-meta span { margin: 0 0.4rem; color: #e8c878; }
+
+  /* ========== 雨季提示橫幅 ========== */
+  .weather-banner {
+    background: linear-gradient(135deg, #3a5468 0%, #4a6578 100%);
+    color: #fff;
+    padding: 1.5rem 1.75rem;
+    margin: 0;
+  }
+
+  .weather-banner-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .weather-banner p {
+    font-size: 0.92rem;
+    color: #dce8f0;
+    line-height: 1.75;
+  }
+
+  .weather-banner strong { color: #ffd98a; font-weight: 600; }
+
+  /* ========== 通用區塊 ========== */
+  .section { padding: 2.5rem 1.75rem 0; }
+
+  .section-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    color: #7d5a2e;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2b2825;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #2b2825;
+  }
+
+  /* ========== 概要卡 ========== */
+  .overview {
+    background-color: #ffffff;
+    border: 1px solid #dcd3c0;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .overview-row {
+    display: flex;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    font-size: 0.95rem;
+  }
+
+  .overview-row:not(:last-child) { border-bottom: 1px dashed #c9bfae; }
+
+  .overview-label {
+    flex: 0 0 4.5rem;
+    color: #7d5a2e;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .overview-content { flex: 1; color: #2b2825; }
+  .overview-content strong { color: #7d5a2e; }
+
+  /* ========== 圖例 ========== */
+  .legend {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    background-color: #faf5e8;
+    border-left: 4px solid #c89638;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .legend-item { display: flex; align-items: center; gap: 0.5rem; }
+  .legend-badge {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .badge-sun { background-color: #c89638; }
+  .badge-rain { background-color: #4a6578; }
+
+  /* ========== DAY ========== */
+  .day { padding: 2.5rem 0 0; }
+
+  .day-banner {
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+    margin: 0 1.75rem;
+    border-radius: 4px;
+  }
+
+  .day-banner-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .day-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(43,40,37,0.05) 0%, rgba(43,40,37,0.65) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.25rem;
+  }
+
+  .day-banner-text { color: #fff; z-index: 1; }
+
+  .day-num-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    color: #e8c878;
+    font-style: italic;
+  }
+
+  .day-date {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+
+  .day-body { padding: 1.5rem 1.75rem 0; }
+
+  /* ========== 時間軸 step ========== */
+  .step {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    position: relative;
+  }
+
+  .step-time {
+    flex: 0 0 3.6rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    color: #7d5a2e;
+    font-weight: 600;
+    padding-top: 0.2rem;
+  }
+
+  .step-line {
+    flex: 0 0 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #c89638;
+    margin-top: 0.55rem;
+    flex-shrink: 0;
+  }
+
+  .step-connector {
+    width: 2px;
+    flex: 1;
+    background-color: #dcd3c0;
+    margin-top: 2px;
+  }
+
+  .step:last-child .step-connector { display: none; }
+
+  .step-content {
+    flex: 1;
+    padding-bottom: 1.25rem;
+  }
+
+  .step-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: #2b2825;
+    margin-bottom: 0.3rem;
+  }
+
+  .step-desc {
+    font-size: 0.93rem;
+    color: #3a3530;
+    line-height: 1.75;
+  }
+
+  .step-hint {
+    display: block;
+    font-size: 0.85rem;
+    color: #6a635c;
+    font-style: italic;
+    margin-top: 0.4rem;
+  }
+
+  /* 晴雨雙版本 */
+  .weather-split { margin-top: 0.7rem; }
+
+  .split-row {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+
+  .split-row.sun { background-color: #faf5e8; border-left: 3px solid #c89638; }
+  .split-row.rain { background-color: #eef2f5; border-left: 3px solid #4a6578; margin-top: 0.4rem; }
+
+  .split-tag {
+    flex: 0 0 auto;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0.05rem 0;
+  }
+  .split-row.sun .split-tag { color: #a6741a; }
+  .split-row.rain .split-tag { color: #3a5468; }
+
+  .split-text { flex: 1; color: #2b2825; }
+
+  /* 小提醒盒 */
+  .tip-box {
+    background-color: #faf5e8;
+    border: 1px solid #c9a54a;
+    border-radius: 4px;
+    padding: 0.85rem 1rem;
+    margin-top: 0.7rem;
+    font-size: 0.86rem;
+    color: #3a3530;
+    line-height: 1.7;
+  }
+  .tip-box strong { color: #7d5a2e; }
+
+  /* 園區路線盒 */
+  .route-box {
+    background-color: #f0ece2;
+    border-radius: 4px;
+    padding: 1rem 1.1rem;
+    margin-top: 0.7rem;
+  }
+  .route-box-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #7d5a2e;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+  }
+  .route-box p {
+    font-size: 0.88rem;
+    color: #2b2825;
+    line-height: 1.75;
+    margin-bottom: 0.4rem;
+  }
+  .route-box p:last-child { margin-bottom: 0; }
+  .route-box strong { color: #7d5a2e; }
+
+  /* 行內插圖場景 */
+  .scene {
+    width: 100%;
+    height: 150px;
+    border-radius: 4px;
+    margin: 0.7rem 0 0.3rem;
+    overflow: hidden;
+    display: block;
+  }
+
+  .img-caption {
+    font-size: 0.78rem;
+    color: #8a8278;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+
+  /* day summary */
+  .day-summary {
+    margin: 1rem 1.75rem 0;
+    padding: 1rem 1.25rem;
+    background-color: #ede6d8;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #3a3530;
+    line-height: 1.75;
+  }
+  .day-summary strong { color: #7d5a2e; }
+
+  /* ========== 打包清單 ========== */
+  .packing {
+    margin: 2.5rem 1.75rem 0;
+    background-color: #ffffff;
+    border: 1px solid #dcd3c0;
+    border-radius: 4px;
+    padding: 1.5rem;
+  }
+
+  .packing h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2b2825;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .packing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .packing-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: #2b2825;
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #e0d8c8;
+  }
+
+  .packing-item:last-child { border-bottom: none; }
+
+  .packing-check {
+    flex: 0 0 auto;
+    color: #c89638;
+    font-weight: 700;
+    margin-top: 0.05rem;
+  }
+
+  .packing-item strong { color: #7d5a2e; }
+
+  /* ========== 安全提醒 ========== */
+  .safety {
+    margin: 2rem 1.75rem 0;
+    background: linear-gradient(135deg, #3a5468 0%, #4a6578 100%);
+    border-radius: 4px;
+    padding: 1.5rem;
+    color: #fff;
+  }
+
+  .safety h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+    letter-spacing: 0.05em;
+    color: #ffd98a;
+  }
+
+  .safety-item {
+    font-size: 0.9rem;
+    color: #e3ecf2;
+    line-height: 1.75;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .safety-item:last-child { border-bottom: none; }
+  .safety-item strong { color: #fff; }
+
+  /* ========== FOOTER ========== */
+  .footer {
+    text-align: center;
+    padding: 3.5rem 1.75rem 0;
+    margin-top: 2rem;
+  }
+  .footer-divider {
+    width: 40px; height: 2px;
+    background-color: #c89638;
+    margin: 0 auto 1.5rem;
+  }
+  .footer-motto {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #7d5a2e;
+    font-size: 1.15rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.5rem;
+  }
+  .footer-zh {
+    font-size: 0.85rem;
+    color: #6a635c;
+    letter-spacing: 0.2em;
+    line-height: 1.9;
+  }
+
+  /* ========== 浮動天數導覽列 ========== */
+  #day1, #day2, #day3, #prep, #top-overview { scroll-margin-top: 72px; }
+
+  .quicknav {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+    z-index: 50;
+    display: flex;
+    gap: 0.3rem;
+    background: rgba(43, 40, 37, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.4rem 0.45rem;
+    border-radius: 999px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.28);
+    border: 1px solid rgba(232, 200, 120, 0.25);
+    max-width: calc(100% - 1.5rem);
+  }
+
+  .quicknav a {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #f0ebe0;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+    line-height: 1.25;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+
+  .quicknav a .qn-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    color: #c9a54a;
+    text-transform: uppercase;
+  }
+
+  .quicknav a.active {
+    background: linear-gradient(135deg, #d4a84a, #b8862f);
+    color: #2b2825;
+    font-weight: 700;
+  }
+
+  .quicknav a.active .qn-label { color: #5a4015; }
+
+  .quicknav a:active { transform: scale(0.95); }
+
+  /* 回到頂端按鈕 */
+  .totop {
+    position: fixed;
+    right: 1rem;
+    bottom: 5rem;
+    z-index: 49;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(43, 40, 37, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(232, 200, 120, 0.3);
+    color: #e8c878;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    text-decoration: none;
+  }
+
+  .totop.show { opacity: 1; pointer-events: auto; }
+
+  @media (min-width: 720px) {
+    .packing-grid { grid-template-columns: 1fr 1fr; gap: 0.5rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <svg class="hero-svg" viewBox="0 0 760 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f7d27e"/>
+          <stop offset="28%" stop-color="#eeb15f"/>
+          <stop offset="52%" stop-color="#cf8a4e"/>
+          <stop offset="100%" stop-color="#6a5f5a"/>
+        </linearGradient>
+        <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fff6e0"/>
+          <stop offset="45%" stop-color="#ffe39c"/>
+          <stop offset="100%" stop-color="#ffce6b" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="760" height="600" fill="url(#sky)"/>
+      <!-- 光暈太陽 -->
+      <circle cx="380" cy="230" r="170" fill="url(#sun)"/>
+      <circle cx="380" cy="230" r="54" fill="#fff4d6"/>
+      <!-- 遠山 -->
+      <path d="M0,320 L120,270 L240,310 L380,255 L520,305 L640,265 L760,300 L760,600 L0,600 Z" fill="#9a7d63" opacity="0.55"/>
+      <path d="M0,370 L150,330 L300,365 L450,325 L600,365 L760,335 L760,600 L0,600 Z" fill="#7a6253" opacity="0.7"/>
+      <!-- 雲海 -->
+      <ellipse cx="180" cy="430" rx="220" ry="42" fill="#fdf6e8" opacity="0.85"/>
+      <ellipse cx="480" cy="450" rx="260" ry="48" fill="#fbf0dd" opacity="0.8"/>
+      <ellipse cx="650" cy="425" rx="180" ry="38" fill="#fdf6e8" opacity="0.75"/>
+      <ellipse cx="330" cy="470" rx="300" ry="55" fill="#fffaf0" opacity="0.9"/>
+      <!-- 前景山稜 -->
+      <path d="M0,490 L180,440 L360,485 L540,438 L760,488 L760,600 L0,600 Z" fill="#4a4640"/>
+    </svg>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Alishan · Rainy Season Edition</div>
+      <h1 class="hero-title">阿里山家族旅行<br>三日圖文行程</h1>
+      <div class="hero-meta">
+        2026 / 6 / 6 – 6 / 8 <span>·</span> 新竹出發 <span>·</span> 10 人 <span>·</span> 住初旭民宿
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 雨季橫幅 ===== -->
+  <div class="weather-banner">
+    <div class="weather-banner-title">☔ 這趟是雨季，但我們準備好了</div>
+    <p>
+      6 月初阿里山降雨機率 <strong>65–90%</strong>，午後雷陣雨是常態。但這正是<strong>雲海最容易出現</strong>的季節——雨歇的空檔，雲霧在茶園間翻騰流動，比大晴天更夢幻。本行程每個重點都附上<strong>晴天版／雨天版</strong>兩種走法，不管當天天氣如何都玩得順。
+    </p>
+  </div>
+
+  <!-- ===== 概要 ===== -->
+  <div class="section" id="top-overview">
+    <div class="section-label">Overview</div>
+    <h2 class="section-heading">旅行一眼看</h2>
+    <div class="overview">
+      <div class="overview-row">
+        <div class="overview-label">核心</div>
+        <div class="overview-content">阿里山日出雲海 + 森林遊樂區小火車 + 奮起湖</div>
+      </div>
+      <div class="overview-row">
+        <div class="overview-label">住宿</div>
+        <div class="overview-content"><strong>初旭民宿</strong>（隙頂 54K · 海拔 1250m · 連住兩晚）</div>
+      </div>
+      <div class="overview-row">
+        <div class="overview-label">日出</div>
+        <div class="overview-content">約 5:10 · 民宿陽台就看得到，不必凌晨衝祝山</div>
+      </div>
+      <div class="overview-row">
+        <div class="overview-label">車程</div>
+        <div class="overview-content">新竹 ↔ 初旭 約 3.5–4 小時（中途嘉義休息 + 午餐）</div>
+      </div>
+      <div class="overview-row">
+        <div class="overview-label">心法</div>
+        <div class="overview-content">雲海、日出隨緣看；雨天有備案，安全第一</div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><span class="legend-badge badge-sun">晴天</span>天氣好的走法</div>
+      <div class="legend-item"><span class="legend-badge badge-rain">雨天</span>下雨的備案</div>
+    </div>
+  </div>
+
+  <!-- ============ DAY 1 ============ -->
+  <div class="day" id="day1">
+    <div class="day-banner">
+      <svg class="day-banner-svg" viewBox="0 0 720 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="d1sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e9b86a"/>
+            <stop offset="55%" stop-color="#c98f54"/>
+            <stop offset="100%" stop-color="#6f7a6a"/>
+          </linearGradient>
+        </defs>
+        <rect width="720" height="160" fill="url(#d1sky)"/>
+        <circle cx="540" cy="55" r="80" fill="#ffe9b0" opacity="0.5"/>
+        <circle cx="540" cy="55" r="26" fill="#fff3d4"/>
+        <path d="M0,90 L120,68 L260,88 L400,64 L560,86 L720,66 L720,160 L0,160 Z" fill="#8a9478" opacity="0.6"/>
+        <ellipse cx="200" cy="120" rx="180" ry="26" fill="#fdf6e8" opacity="0.8"/>
+        <ellipse cx="520" cy="128" rx="220" ry="30" fill="#fffaf0" opacity="0.85"/>
+        <path d="M0,130 L160,108 L340,128 L520,106 L720,128 L720,160 L0,160 Z" fill="#52564a"/>
+      </svg>
+      <div class="day-banner-overlay">
+        <div class="day-banner-text">
+          <div class="day-num-label">DAY ONE · 抵達 & 夕陽</div>
+          <div class="day-date">6/6（六）上山日</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-body">
+      <div class="step">
+        <div class="step-time">08:00</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">新竹出發</div>
+          <div class="step-desc">
+            走國道 1 號南下，預估 3.5 小時到嘉義。
+            <span class="step-hint">兩車同行，中途西螺休息站集合、上廁所、伸展一下。</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">11:30</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">嘉義市區午餐 · 火雞肉飯</div>
+          <div class="step-desc">
+            嘉義必吃火雞肉飯（郭家、劉里長、噴水都是經典），或林聰明沙鍋魚頭。
+            <svg class="scene" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="150" fill="#ede0c8"/>
+              <rect y="100" width="400" height="50" fill="#d8c4a0"/>
+              <!-- 碗 -->
+              <ellipse cx="200" cy="98" rx="78" ry="16" fill="#b89868"/>
+              <path d="M124,92 Q200,150 276,92 Z" fill="#e8e2d4"/>
+              <ellipse cx="200" cy="92" rx="76" ry="15" fill="#f4efe4"/>
+              <!-- 雞肉飯 -->
+              <ellipse cx="200" cy="88" rx="62" ry="11" fill="#f0d9a8"/>
+              <g fill="#c98a4a">
+                <ellipse cx="178" cy="86" rx="16" ry="5"/>
+                <ellipse cx="212" cy="88" rx="18" ry="5"/>
+                <ellipse cx="196" cy="83" rx="14" ry="4"/>
+              </g>
+              <ellipse cx="200" cy="84" rx="8" ry="3" fill="#9a5a2a"/>
+              <!-- 熱氣 -->
+              <g stroke="#fff" stroke-width="3" fill="none" opacity="0.5" stroke-linecap="round">
+                <path d="M180,70 Q174,60 180,50 Q186,40 180,30"/>
+                <path d="M220,70 Q214,60 220,50 Q226,40 220,30"/>
+              </g>
+            </svg>
+            <div class="img-caption">嘉義火雞肉飯（示意）</div>
+            <span class="step-hint">吃飽再上山，山上餐飲選擇少，可順便買點心。</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">13:30</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">中埔交流道 → 上阿里山公路（台 18 線）</div>
+          <div class="step-desc">
+            開始爬山，嘉義市到初旭約 1 小時 10 分。
+            <span class="step-hint">山路彎多，暈車藥先吃、開慢一點，雨天更要慢。</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">16:00</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">抵達初旭民宿 Check-in</div>
+          <div class="step-desc">
+            阿里山公路 54K，隙頂。卸行李、休息、喝杯熱茶，適應海拔。
+            <div class="tip-box">
+              <strong>到了先做這件事：</strong>問老闆娘今晚與隔天清晨的天氣狀況、二延平步道入口平台從民宿走過去多遠、晚餐推薦哪間。她是在地人，最準。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">17:00</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">傍晚時光 · 夕陽 / 雲海</div>
+          <div class="step-desc">
+            <div class="weather-split">
+              <div class="split-row sun">
+                <span class="split-tag">晴天</span>
+                <span class="split-text">走幾分鐘到二延平步道入口觀景平台看夕陽、雲海。日落約 18:30，提前半小時到。</span>
+              </div>
+              <div class="split-row rain">
+                <span class="split-tag">雨天</span>
+                <span class="split-text">待在民宿陽台（有遮蔽），泡茶看雲霧在茶園間流動。雨歇時雲海最美，隨時留意天空。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">19:00</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">晚餐 · 回民宿 · 看星空</div>
+          <div class="step-desc">
+            隙頂山產熱炒，或請老闆娘推薦。晴朗的夜可看星空，初夏還有機會遇到螢火蟲尾聲。
+            <span class="step-hint">早點睡，明天清晨看日出。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-summary">
+      <strong>Day 1 重點：</strong>不排太緊，讓長輩小孩適應海拔與路程。傍晚的夕陽 / 雲海是這天的主角，看不看得到都別執著，舒服最重要。
+    </div>
+  </div>
+
+  <!-- ============ DAY 2 ============ -->
+  <div class="day" id="day2">
+    <div class="day-banner">
+      <svg class="day-banner-svg" viewBox="0 0 720 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="d2sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#bcd0b0"/>
+            <stop offset="60%" stop-color="#7d9670"/>
+            <stop offset="100%" stop-color="#46553e"/>
+          </linearGradient>
+        </defs>
+        <rect width="720" height="160" fill="url(#d2sky)"/>
+        <!-- 神木林 -->
+        <g fill="#3f4a37" opacity="0.85">
+          <rect x="80" y="30" width="14" height="130" rx="4"/>
+          <rect x="180" y="15" width="16" height="145" rx="4"/>
+          <rect x="300" y="35" width="13" height="125" rx="4"/>
+          <rect x="430" y="20" width="15" height="140" rx="4"/>
+          <rect x="560" y="40" width="14" height="120" rx="4"/>
+          <rect x="640" y="22" width="15" height="138" rx="4"/>
+        </g>
+        <g fill="#5a6b4c" opacity="0.6">
+          <ellipse cx="87" cy="40" rx="34" ry="26"/>
+          <ellipse cx="188" cy="25" rx="40" ry="30"/>
+          <ellipse cx="306" cy="44" rx="32" ry="24"/>
+          <ellipse cx="437" cy="30" rx="38" ry="28"/>
+          <ellipse cx="567" cy="48" rx="34" ry="25"/>
+          <ellipse cx="647" cy="32" rx="38" ry="27"/>
+        </g>
+        <!-- 霧氣 -->
+        <ellipse cx="260" cy="120" rx="240" ry="28" fill="#e8eee2" opacity="0.55"/>
+        <ellipse cx="540" cy="130" rx="220" ry="26" fill="#eef3e8" opacity="0.5"/>
+        <!-- 鐵軌地面 -->
+        <rect x="0" y="138" width="720" height="22" fill="#3a4233"/>
+        <rect x="0" y="146" width="720" height="3" fill="#8a7a5a" opacity="0.6"/>
+      </svg>
+      <div class="day-banner-overlay">
+        <div class="day-banner-text">
+          <div class="day-num-label">DAY TWO · 精華日</div>
+          <div class="day-date">6/7（日）日出 + 園區 + 奮起湖</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-body">
+      <div class="step">
+        <div class="step-time">05:10</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">民宿陽台看日出</div>
+          <div class="step-desc">
+            6 月初日出約 5:10–5:15。走出房門就看得到，不必出發、不必排隊。
+            <div class="weather-split">
+              <div class="split-row sun">
+                <span class="split-tag">晴天</span>
+                <span class="split-text">太陽從山稜升起，配雲海超美。想要更開闊的人可走幾分鐘到二延平平台。</span>
+              </div>
+              <div class="split-row rain">
+                <span class="split-tag">雨天</span>
+                <span class="split-text">看雲隙曙光與翻騰雲霧也很夢幻；想多睡就睡，不勉強。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">06:00</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">回房補眠</div>
+          <div class="step-desc">看完日出回房躺一下，長輩小孩可以再睡一輪。</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">08:00</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">民宿早餐</div>
+          <div class="step-desc">初旭早餐評價很好，吃飽再出發。</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">09:00</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">出發上阿里山森林遊樂區</div>
+          <div class="step-desc">
+            從初旭開車約 50–60 分鐘到遊客中心停車場。園區內車不能開進去，靠小火車或電動遊園車。
+            <span class="step-hint">途中經過石棹觀景台（台18線62K），有雲海可停 15 分鐘。</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">10:00</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">進園區 · 搭小火車 · 走巨木群</div>
+          <div class="step-desc">
+            門票全票 200 元、65 歲以上 10 元、兒童半票。沼平線小火車單程 100 元。
+            <svg class="scene" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="trainsky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#cddcc2"/>
+                  <stop offset="100%" stop-color="#8aa07a"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="150" fill="url(#trainsky)"/>
+              <!-- 樹 -->
+              <g fill="#3f4a37"><rect x="40" y="20" width="10" height="100"/><rect x="340" y="25" width="11" height="95"/></g>
+              <g fill="#566546" opacity="0.7"><ellipse cx="45" cy="28" rx="26" ry="20"/><ellipse cx="345" cy="32" rx="28" ry="22"/></g>
+              <!-- 地面/鐵軌 -->
+              <rect y="112" width="400" height="38" fill="#5a5040"/>
+              <g stroke="#8a7a5a" stroke-width="3"><line x1="0" y1="120" x2="400" y2="120"/><line x1="0" y1="128" x2="400" y2="128"/></g>
+              <!-- 小火車 -->
+              <rect x="120" y="66" width="150" height="46" rx="8" fill="#a23b2e"/>
+              <rect x="132" y="74" width="28" height="20" rx="3" fill="#f4e9d4"/>
+              <rect x="170" y="74" width="28" height="20" rx="3" fill="#f4e9d4"/>
+              <rect x="208" y="74" width="28" height="20" rx="3" fill="#f4e9d4"/>
+              <rect x="110" y="58" width="34" height="54" rx="6" fill="#7d2b22"/>
+              <circle cx="148" cy="116" r="9" fill="#2b2520"/>
+              <circle cx="200" cy="116" r="9" fill="#2b2520"/>
+              <circle cx="248" cy="116" r="9" fill="#2b2520"/>
+            </svg>
+            <div class="img-caption">阿里山森林小火車（示意）</div>
+            <div class="route-box">
+              <div class="route-box-title">🚂 長輩 & 小孩友善路線（2.5–3 小時）</div>
+              <p>阿里山站 →（小火車）→ <strong>沼平站</strong> → 櫻之道天空步道 → 姊妹潭 → 受鎮宮（午餐）→ <strong>巨木群棧道</strong> → 香林神木 → 神木站 →（小火車）→ 回阿里山站。</p>
+              <p>從高處往低處走，平緩木棧道為主，沒有困難坡段。</p>
+            </div>
+            <div class="weather-split">
+              <div class="split-row sun">
+                <span class="split-tag">晴天</span>
+                <span class="split-text">走完整路線，巨木群、神木、姊妹潭都很好拍。</span>
+              </div>
+              <div class="split-row rain">
+                <span class="split-tag">雨天</span>
+                <span class="split-text">巨木群棧道有樹冠遮雨，小雨中走反而清涼少人；雨大就縮短路線，只搭小火車到沼平拍照、回程，1 小時搞定。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">12:00</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">園區內午餐</div>
+          <div class="step-desc">受鎮宮、香林服務區有美食街，簡餐、熱湯、山產都有。</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">14:30</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">出園區 → 開車去奮起湖</div>
+          <div class="step-desc">
+            阿里山園區到奮起湖約 40 分鐘。
+            <div class="tip-box">
+              <strong>彈性備案：</strong>如果園區走得慢或雨太大，奮起湖可改到 Day 3 下山時順遊。不用硬塞。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">15:30</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">奮起湖老街</div>
+          <div class="step-desc">
+            逛百年老街、吃鐵路便當、檜木甜甜圈、手洗愛玉。
+            <svg class="scene" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="150" fill="#e0d4be"/>
+              <!-- 老街屋頂剪影 -->
+              <g fill="#6a5a44" opacity="0.5">
+                <path d="M0,55 L60,35 L120,55 Z"/>
+                <path d="M90,60 L150,38 L210,60 Z"/>
+                <path d="M190,55 L250,35 L310,55 Z"/>
+                <path d="M290,60 L350,40 L400,60 Z"/>
+              </g>
+              <rect y="58" width="400" height="50" fill="#c9b896" opacity="0.5"/>
+              <rect y="100" width="400" height="50" fill="#b89868"/>
+              <!-- 鐵路便當盒 -->
+              <rect x="135" y="78" width="130" height="56" rx="5" fill="#7a4a2a"/>
+              <rect x="143" y="85" width="114" height="42" rx="3" fill="#e8ddc8"/>
+              <circle cx="175" cy="100" r="13" fill="#d88a4a"/>
+              <rect x="198" y="92" width="26" height="16" rx="3" fill="#c95a3a"/>
+              <ellipse cx="240" cy="100" rx="12" ry="9" fill="#8aa04a"/>
+              <rect x="160" y="114" width="80" height="8" rx="2" fill="#f4efe4"/>
+            </svg>
+            <div class="img-caption">奮起湖老街 & 鐵路便當（示意）</div>
+            <span class="step-hint">老街店家多有遮蔽，雨天逛街吃便當影響不大。</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">17:30</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">回初旭民宿</div>
+          <div class="step-desc">
+            奮起湖到民宿約 45 分鐘。晚上民宿休息。
+            <span class="step-hint">這天很充實，早點睡，明天可再看一次日出。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-summary">
+      <strong>Day 2 重點：</strong>精華日。阿里山園區小火車 + 巨木群必走，雨天有遮蔽不受影響。<strong>小火車建議前一晚先上阿里山林鐵官網訂票。</strong>奮起湖時間緊可挪 Day 3。
+    </div>
+  </div>
+
+  <!-- ============ DAY 3 ============ -->
+  <div class="day" id="day3">
+    <div class="day-banner">
+      <svg class="day-banner-svg" viewBox="0 0 720 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="d3sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f0cf86"/>
+            <stop offset="55%" stop-color="#cf9a5e"/>
+            <stop offset="100%" stop-color="#7a7158"/>
+          </linearGradient>
+        </defs>
+        <rect width="720" height="160" fill="url(#d3sky)"/>
+        <circle cx="200" cy="50" r="70" fill="#ffeab2" opacity="0.5"/>
+        <circle cx="200" cy="50" r="24" fill="#fff3d4"/>
+        <!-- 茶園梯田層 -->
+        <path d="M0,95 Q180,78 360,92 T720,88 L720,160 L0,160 Z" fill="#9aa06a" opacity="0.7"/>
+        <path d="M0,115 Q180,100 360,112 T720,108 L720,160 L0,160 Z" fill="#7e8654" opacity="0.8"/>
+        <path d="M0,135 Q180,122 360,132 T720,128 L720,160 L0,160 Z" fill="#636a42"/>
+        <ellipse cx="480" cy="118" rx="200" ry="22" fill="#fdf6e8" opacity="0.55"/>
+      </svg>
+      <div class="day-banner-overlay">
+        <div class="day-banner-text">
+          <div class="day-num-label">DAY THREE · 最後一道曙光</div>
+          <div class="day-date">6/8（一）下山日</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-body">
+      <div class="step">
+        <div class="step-time">05:10</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">陽台看第二次日出（補考機會）</div>
+          <div class="step-desc">昨天沒看到好的，今天補一次；昨天很滿意，今天想睡就睡。</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">08:30</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">早餐 · 悠閒收行李</div>
+          <div class="step-desc">不趕時間，慢慢吃，在陽台拍最後幾張照片。</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">10:00</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">退房下山</div>
+          <div class="step-desc">
+            沿台 18 線往嘉義方向。
+            <div class="tip-box">
+              <strong>為什麼早上下山好：</strong>午後雷陣雨多在 13–16 點，早上下山正好避開。萬一遇雨，車內很安全，慢慢開過去就好。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">11:00</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">中途景點（看天氣二選一）</div>
+          <div class="step-desc">
+            <div class="weather-split">
+              <div class="split-row sun">
+                <span class="split-tag">晴天</span>
+                <span class="split-text">觸口遊客中心 + 逐鹿傳說梅花鹿園，餵鹿、拍小火車，小朋友會很開心。</span>
+              </div>
+              <div class="split-row rain">
+                <span class="split-tag">雨天</span>
+                <span class="split-text">直接到中埔穀倉農創園區（有室內、咖啡廳、星巴克）休息，或半天岩紫雲寺。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">12:30</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">嘉義 / 中埔午餐</div>
+          <div class="step-desc">中埔穀倉農創園區有草皮、咖啡廳適合休息，或回嘉義市區吃一頓再上國道。</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">14:00</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">上國道北返新竹</div>
+          <div class="step-desc">預估 3.5 小時，中途西螺或湖口休息站再停一次。</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-time">17:30</div>
+        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+        <div class="step-content">
+          <div class="step-title">回到新竹 · 旅程結束</div>
+          <div class="step-desc">週一傍晚國道通常順，避開下班車潮。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-summary">
+      <strong>Day 3 重點：</strong>下山日不塞行程。早上下山避開午後雷雨，中途只排一個景點休息，回程讓長輩小孩在車上補眠。
+    </div>
+  </div>
+
+  <!-- ===== 打包清單 ===== -->
+  <div class="packing" id="prep">
+    <h3>🎒 雨季打包清單</h3>
+    <div class="packing-grid">
+      <div class="packing-item"><span class="packing-check">✓</span><span><strong>輕便雨衣</strong>（每人一件，比傘重要，走步道雙手要空）</span></div>
+      <div class="packing-item"><span class="packing-check">✓</span><span><strong>防滑好走的鞋</strong>（步道濕滑，對長輩小孩特別重要）</span></div>
+      <div class="packing-item"><span class="packing-check">✓</span><span><strong>薄外套 / 保暖層</strong>（山區早晚涼，約 22°C）</span></div>
+      <div class="packing-item"><span class="packing-check">✓</span><span><strong>暈車藥</strong>（山路彎多，上山前先吃）</span></div>
+      <div class="packing-item"><span class="packing-check">✓</span><span><strong>一套換洗衣物放車上</strong>（萬一淋濕可換）</span></div>
+      <div class="packing-item"><span class="packing-check">✓</span><span><strong>手電筒 / 手機燈</strong>（清晨看日出、山區夜暗）</span></div>
+      <div class="packing-item"><span class="packing-check">✓</span><span><strong>保溫瓶</strong>（山上喝熱茶熱水很舒服）</span></div>
+      <div class="packing-item"><span class="packing-check">✓</span><span><strong>常備藥、健保卡</strong>（山區醫療資源少）</span></div>
+    </div>
+  </div>
+
+  <!-- ===== 安全提醒 ===== -->
+  <div class="safety">
+    <h3>🚗 雨天 / 霧天行車提醒</h3>
+    <div class="safety-item"><strong>起霧開霧燈：</strong>雲霧飄到路上能見度剩幾公尺，務必開霧燈、放慢車速、與前車保持距離。</div>
+    <div class="safety-item"><strong>濕滑路面：</strong>下坡提早輕踩煞車、不要急轉彎，避免打滑。</div>
+    <div class="safety-item"><strong>打雷時待車內：</strong>汽車是安全避雷場所，雷雨中不要下車站在空曠處或樹下。</div>
+    <div class="safety-item"><strong>早出發、早下山：</strong>避開午後 13–16 點雷雨高峰，行程都排在上午與傍晚。</div>
+    <div class="safety-item"><strong>看雲海不淋雨：</strong>民宿陽台、車上都看得到，要拍無遮蔽全景就穿雨衣（別撐傘，山上風大）。</div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer">
+    <div class="footer-divider"></div>
+    <div class="footer-motto">Keep Exploring, and leave traces.</div>
+    <div class="footer-zh">願這趟阿里山之旅<br>雨裡雲裡，都留下最美的回憶</div>
+  </div>
+
+</div>
+
+<!-- ===== 浮動天數導覽列 ===== -->
+<nav class="quicknav" id="quicknav">
+  <a href="#top-overview" data-target="top-overview"><span class="qn-label">Info</span>總覽</a>
+  <a href="#day1" data-target="day1"><span class="qn-label">Day 1</span>第一天</a>
+  <a href="#day2" data-target="day2"><span class="qn-label">Day 2</span>第二天</a>
+  <a href="#day3" data-target="day3"><span class="qn-label">Day 3</span>第三天</a>
+  <a href="#prep" data-target="prep"><span class="qn-label">Pack</span>準備</a>
+</nav>
+
+<a href="#" class="totop" id="totop" aria-label="回到頂端">↑</a>
+
+<script>
+(function () {
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.quicknav a'));
+  var sections = navLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('data-target'));
+  });
+  var totop = document.getElementById('totop');
+
+  // 平滑捲動 + 回頂端
+  navLinks.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var el = document.getElementById(a.getAttribute('data-target'));
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+  totop.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // 捲動時高亮目前所在天數 + 顯示回頂端
+  function onScroll() {
+    var y = window.scrollY + window.innerHeight * 0.35;
+    var activeIdx = 0;
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i] && sections[i].offsetTop <= y) activeIdx = i;
+    }
+    navLinks.forEach(function (a, i) {
+      a.classList.toggle('active', i === activeIdx);
+    });
+    totop.classList.toggle('show', window.scrollY > 500);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
