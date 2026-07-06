@@ -1,1228 +1,1088 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light only">
-<meta name="supported-color-schemes" content="light">
-<meta name="theme-color" content="#f5f1ea">
-<title>阿里山家族旅行 · 雨季版圖文行程 · 2026/6/6-8</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2026 員工旅遊報名表 ｜ 溪頭森林遊樂區・五星級米堤大飯店 二日遊</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet" />
 <style>
-  :root { color-scheme: light only; }
-  html { color-scheme: light only; background-color: #f5f1ea; }
-  @media (prefers-color-scheme: dark) {
-    :root { color-scheme: light only; }
-    html, body { background-color: #f5f1ea !important; color: #2b2825 !important; }
+  :root{
+    --forest-900:#001f3a; --forest-800:#003057; --forest-700:#0c3a63; --forest-600:#1a4a73;
+    --moss:#3f7fb0; --sage:#9db8cf; --cream:#eef3f8; --paper:#ffffff; --bark:#39495a;
+    --gold:#ff5c39; --rust:#e0492a; --line:#d6e0ea; --ink:#1c2b3a; --muted:#6b7a89;
+    --shadow:0 12px 40px -18px rgba(0,31,58,.55);
   }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { font-size: 16px; scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Noto Serif TC', 'Songti TC', 'PingFang TC', serif;
-    background-color: #f5f1ea;
-    color: #2b2825;
-    line-height: 1.8;
-    font-weight: 400;
-    -webkit-text-size-adjust: 100%;
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; font-family:"Noto Sans TC",sans-serif; color:var(--ink);
+    background:
+      radial-gradient(1200px 500px at 80% -10%, rgba(26,74,115,.18), transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, rgba(0,48,87,.14), transparent 55%),
+      var(--cream);
+    line-height:1.7; -webkit-font-smoothing:antialiased;
   }
-
-  .container { max-width: 760px; margin: 0 auto; padding: 0 0 5rem; }
-
-  /* ========== HERO ========== */
-  .hero {
-    position: relative;
-    height: 64vh;
-    min-height: 440px;
-    max-height: 600px;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    background: linear-gradient(180deg, #f4c970 0%, #e8a85a 22%, #c97f4a 45%, #8a6a52 68%, #4a5560 100%);
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
   }
-
-  .hero-svg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(43,40,37,0) 40%, rgba(43,40,37,0.2) 65%, rgba(43,40,37,0.8) 100%);
-    z-index: 1;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 2.5rem 1.75rem;
-    color: #fff;
-    width: 100%;
-  }
-
-  .hero-eyebrow {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    color: #e8c878;
-    font-style: italic;
-    margin-bottom: 0.75rem;
-  }
-
-  .hero-title {
-    font-size: clamp(2rem, 8vw, 3rem);
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    line-height: 1.3;
-    margin-bottom: 1rem;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
-  }
-
-  .hero-meta {
-    font-size: 1rem;
-    letter-spacing: 0.1em;
-    color: #f0ebe0;
-  }
-
-  .hero-meta span { margin: 0 0.4rem; color: #e8c878; }
-
-  /* ========== 雨季提示橫幅 ========== */
-  .weather-banner {
-    background: linear-gradient(135deg, #3a5468 0%, #4a6578 100%);
-    color: #fff;
-    padding: 1.5rem 1.75rem;
-    margin: 0;
-  }
-
-  .weather-banner-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.6rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .weather-banner p {
-    font-size: 0.92rem;
-    color: #dce8f0;
-    line-height: 1.75;
-  }
-
-  .weather-banner strong { color: #ffd98a; font-weight: 600; }
-
-  /* ========== 通用區塊 ========== */
-  .section { padding: 2.5rem 1.75rem 0; }
-
-  .section-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.9rem;
-    letter-spacing: 0.3em;
-    color: #7d5a2e;
-    text-transform: uppercase;
-    font-style: italic;
-    margin-bottom: 0.5rem;
-  }
-
-  .section-heading {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #2b2825;
-    letter-spacing: 0.05em;
-    margin-bottom: 1.25rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 2px solid #2b2825;
-  }
-
-  /* ========== 概要卡 ========== */
-  .overview {
-    background-color: #ffffff;
-    border: 1px solid #dcd3c0;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .overview-row {
-    display: flex;
-    gap: 1rem;
-    padding: 0.6rem 0;
-    font-size: 0.95rem;
-  }
-
-  .overview-row:not(:last-child) { border-bottom: 1px dashed #c9bfae; }
-
-  .overview-label {
-    flex: 0 0 4.5rem;
-    color: #7d5a2e;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-  }
-
-  .overview-content { flex: 1; color: #2b2825; }
-  .overview-content strong { color: #7d5a2e; }
-
-  /* ========== 圖例 ========== */
-  .legend {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    background-color: #faf5e8;
-    border-left: 4px solid #c89638;
-    padding: 1rem 1.25rem;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-  }
-
-  .legend-item { display: flex; align-items: center; gap: 0.5rem; }
-  .legend-badge {
-    display: inline-block;
-    padding: 0.15rem 0.6rem;
-    border-radius: 3px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: #fff;
-  }
-  .badge-sun { background-color: #c89638; }
-  .badge-rain { background-color: #4a6578; }
-
-  /* ========== DAY ========== */
-  .day { padding: 2.5rem 0 0; }
-
-  .day-banner {
-    position: relative;
-    height: 160px;
-    overflow: hidden;
-    margin: 0 1.75rem;
-    border-radius: 4px;
-  }
-
-  .day-banner-svg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .day-banner-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(43,40,37,0.05) 0%, rgba(43,40,37,0.65) 100%);
-    display: flex;
-    align-items: flex-end;
-    padding: 1.25rem;
-  }
-
-  .day-banner-text { color: #fff; z-index: 1; }
-
-  .day-num-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.25em;
-    color: #e8c878;
-    font-style: italic;
-  }
-
-  .day-date {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
-  }
-
-  .day-body { padding: 1.5rem 1.75rem 0; }
-
-  /* ========== 時間軸 step ========== */
-  .step {
-    display: flex;
-    gap: 1rem;
-    padding: 0.5rem 0;
-    position: relative;
-  }
-
-  .step-time {
-    flex: 0 0 3.6rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.95rem;
-    color: #7d5a2e;
-    font-weight: 600;
-    padding-top: 0.2rem;
-  }
-
-  .step-line {
-    flex: 0 0 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .step-dot {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background-color: #c89638;
-    margin-top: 0.55rem;
-    flex-shrink: 0;
-  }
-
-  .step-connector {
-    width: 2px;
-    flex: 1;
-    background-color: #dcd3c0;
-    margin-top: 2px;
-  }
-
-  .step:last-child .step-connector { display: none; }
-
-  .step-content {
-    flex: 1;
-    padding-bottom: 1.25rem;
-  }
-
-  .step-title {
-    font-size: 1.08rem;
-    font-weight: 700;
-    color: #2b2825;
-    margin-bottom: 0.3rem;
-  }
-
-  .step-desc {
-    font-size: 0.93rem;
-    color: #3a3530;
-    line-height: 1.75;
-  }
-
-  .step-hint {
-    display: block;
-    font-size: 0.85rem;
-    color: #6a635c;
-    font-style: italic;
-    margin-top: 0.4rem;
-  }
-
-  /* 晴雨雙版本 */
-  .weather-split { margin-top: 0.7rem; }
-
-  .split-row {
-    display: flex;
-    gap: 0.6rem;
-    padding: 0.6rem 0.8rem;
-    font-size: 0.88rem;
-    line-height: 1.7;
-  }
-
-  .split-row.sun { background-color: #faf5e8; border-left: 3px solid #c89638; }
-  .split-row.rain { background-color: #eef2f5; border-left: 3px solid #4a6578; margin-top: 0.4rem; }
-
-  .split-tag {
-    flex: 0 0 auto;
-    font-weight: 700;
-    font-size: 0.8rem;
-    padding: 0.05rem 0;
-  }
-  .split-row.sun .split-tag { color: #a6741a; }
-  .split-row.rain .split-tag { color: #3a5468; }
-
-  .split-text { flex: 1; color: #2b2825; }
-
-  /* 小提醒盒 */
-  .tip-box {
-    background-color: #faf5e8;
-    border: 1px solid #c9a54a;
-    border-radius: 4px;
-    padding: 0.85rem 1rem;
-    margin-top: 0.7rem;
-    font-size: 0.86rem;
-    color: #3a3530;
-    line-height: 1.7;
-  }
-  .tip-box strong { color: #7d5a2e; }
-
-  /* 園區路線盒 */
-  .route-box {
-    background-color: #f0ece2;
-    border-radius: 4px;
-    padding: 1rem 1.1rem;
-    margin-top: 0.7rem;
-  }
-  .route-box-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #7d5a2e;
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.05em;
-  }
-  .route-box p {
-    font-size: 0.88rem;
-    color: #2b2825;
-    line-height: 1.75;
-    margin-bottom: 0.4rem;
-  }
-  .route-box p:last-child { margin-bottom: 0; }
-  .route-box strong { color: #7d5a2e; }
-
-  /* 行內插圖場景 */
-  .scene {
-    width: 100%;
-    height: 150px;
-    border-radius: 4px;
-    margin: 0.7rem 0 0.3rem;
-    overflow: hidden;
-    display: block;
-  }
-
-  .img-caption {
-    font-size: 0.78rem;
-    color: #8a8278;
-    font-style: italic;
-    text-align: center;
-    margin-bottom: 0.3rem;
-  }
-
-  /* day summary */
-  .day-summary {
-    margin: 1rem 1.75rem 0;
-    padding: 1rem 1.25rem;
-    background-color: #ede6d8;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    color: #3a3530;
-    line-height: 1.75;
-  }
-  .day-summary strong { color: #7d5a2e; }
-
-  /* ========== 打包清單 ========== */
-  .packing {
-    margin: 2.5rem 1.75rem 0;
-    background-color: #ffffff;
-    border: 1px solid #dcd3c0;
-    border-radius: 4px;
-    padding: 1.5rem;
-  }
-
-  .packing h3 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #2b2825;
-    margin-bottom: 1rem;
-    letter-spacing: 0.05em;
-  }
-
-  .packing-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  .packing-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.6rem;
-    font-size: 0.9rem;
-    color: #2b2825;
-    padding: 0.4rem 0;
-    border-bottom: 1px dashed #e0d8c8;
-  }
-
-  .packing-item:last-child { border-bottom: none; }
-
-  .packing-check {
-    flex: 0 0 auto;
-    color: #c89638;
-    font-weight: 700;
-    margin-top: 0.05rem;
-  }
-
-  .packing-item strong { color: #7d5a2e; }
-
-  /* ========== 安全提醒 ========== */
-  .safety {
-    margin: 2rem 1.75rem 0;
-    background: linear-gradient(135deg, #3a5468 0%, #4a6578 100%);
-    border-radius: 4px;
-    padding: 1.5rem;
-    color: #fff;
-  }
-
-  .safety h3 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin-bottom: 0.9rem;
-    letter-spacing: 0.05em;
-    color: #ffd98a;
-  }
-
-  .safety-item {
-    font-size: 0.9rem;
-    color: #e3ecf2;
-    line-height: 1.75;
-    padding: 0.4rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
-  }
-  .safety-item:last-child { border-bottom: none; }
-  .safety-item strong { color: #fff; }
-
-  /* ========== FOOTER ========== */
-  .footer {
-    text-align: center;
-    padding: 3.5rem 1.75rem 0;
-    margin-top: 2rem;
-  }
-  .footer-divider {
-    width: 40px; height: 2px;
-    background-color: #c89638;
-    margin: 0 auto 1.5rem;
-  }
-  .footer-motto {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    color: #7d5a2e;
-    font-size: 1.15rem;
-    letter-spacing: 0.12em;
-    margin-bottom: 0.5rem;
-  }
-  .footer-zh {
-    font-size: 0.85rem;
-    color: #6a635c;
-    letter-spacing: 0.2em;
-    line-height: 1.9;
-  }
-
-  /* ========== 浮動天數導覽列 ========== */
-  #day1, #day2, #day3, #prep, #top-overview { scroll-margin-top: 72px; }
-
-  .quicknav {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 1rem;
-    z-index: 50;
-    display: flex;
-    gap: 0.3rem;
-    background: rgba(43, 40, 37, 0.92);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 0.4rem 0.45rem;
-    border-radius: 999px;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.28);
-    border: 1px solid rgba(232, 200, 120, 0.25);
-    max-width: calc(100% - 1.5rem);
-  }
-
-  .quicknav a {
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: #f0ebe0;
-    font-size: 0.78rem;
-    letter-spacing: 0.03em;
-    padding: 0.4rem 0.7rem;
-    border-radius: 999px;
-    line-height: 1.25;
-    transition: background 0.2s, color 0.2s;
-    white-space: nowrap;
-  }
-
-  .quicknav a .qn-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.62rem;
-    letter-spacing: 0.1em;
-    color: #c9a54a;
-    text-transform: uppercase;
-  }
-
-  .quicknav a.active {
-    background: linear-gradient(135deg, #d4a84a, #b8862f);
-    color: #2b2825;
-    font-weight: 700;
-  }
-
-  .quicknav a.active .qn-label { color: #5a4015; }
-
-  .quicknav a:active { transform: scale(0.95); }
-
-  /* 回到頂端按鈕 */
-  .totop {
-    position: fixed;
-    right: 1rem;
-    bottom: 5rem;
-    z-index: 49;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: rgba(43, 40, 37, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(232, 200, 120, 0.3);
-    color: #e8c878;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-    text-decoration: none;
-  }
-
-  .totop.show { opacity: 1; pointer-events: auto; }
-
-  @media (min-width: 720px) {
-    .packing-grid { grid-template-columns: 1fr 1fr; gap: 0.5rem 1.5rem; }
-  }
+  .wrap{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 18px 64px;}
+
+  /* 語言切換 */
+  .langbar{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:16px 0 0;}
+  .langbar .lg-ic{font-size:15px;margin-right:1px;}
+  .langbtn{border:1.5px solid var(--line);background:#fff;color:var(--forest-700);font-family:inherit;font-weight:700;font-size:13px;padding:6px 13px;border-radius:999px;cursor:pointer;transition:.15s;line-height:1.2;}
+  .langbtn:hover{border-color:var(--moss);}
+  .langbtn.on{background:var(--forest-700);color:#fff;border-color:var(--forest-700);}
+  /* 隱藏 Google 翻譯內建橫幅與工具列 */
+  .goog-te-banner-frame,.goog-te-gadget,#goog-te-banner-frame,iframe.skiptranslate,.VIpgJd-ZVi9od-ORHb-OEVmcd{display:none !important;}
+  body{top:0 !important;position:static !important;}
+  .goog-te-gadget-icon{display:none;}
+  #goog-gt-tt,.goog-te-balloon-frame{display:none !important;}
+  font[style]{background:none !important;box-shadow:none !important;}
+
+  /* Hero */
+  .hero{margin:22px 0 26px;border-radius:26px;overflow:hidden;background:linear-gradient(160deg,var(--forest-800),var(--forest-600) 130%);color:#eaf1f8;box-shadow:var(--shadow);position:relative;}
+  .hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;mix-blend-mode:soft-light;background:radial-gradient(closest-side, rgba(255,255,255,.7), transparent) 12% 120%/220px 220px no-repeat,radial-gradient(closest-side, rgba(255,255,255,.5), transparent) 95% -20%/260px 260px no-repeat;}
+  .hero-inner{position:relative;padding:30px 26px 28px;}
+  .okb-logo{height:44px;width:auto;display:block;margin-bottom:16px;}
+  .ribbon{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.14em;font-weight:700;background:rgba(255,253,248,.14);border:1px solid rgba(255,253,248,.28);padding:6px 14px;border-radius:999px;backdrop-filter:blur(4px);}
+  .hero h1{font-family:"Noto Serif TC",serif;font-weight:900;font-size:clamp(26px,6vw,40px);line-height:1.25;margin:16px 0 6px;letter-spacing:.01em;}
+  .hero .sub{font-size:clamp(15px,3.6vw,18px);font-weight:500;opacity:.92;}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:18px;font-size:14px;opacity:.95;}
+  .hero .meta span{display:inline-flex;align-items:center;gap:7px;}
+  .hero .meta b{font-weight:700;color:#fff;}
+  .leaf{width:18px;height:18px;flex:none;}
+  .hero-cta{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:rgba(255,253,248,.16);border:1.5px solid rgba(255,253,248,.5);color:#fff;font-family:inherit;font-weight:700;font-size:15px;padding:10px 20px;border-radius:999px;text-decoration:none;backdrop-filter:blur(4px);transition:.16s;}
+  .hero-cta:hover{background:#fff;color:var(--forest-800);border-color:#fff;transform:translateY(-2px);}
+  .hero-cta .arr{transition:transform .16s;}
+  .hero-cta:hover .arr{transform:translateX(3px);}
+
+  /* Cards */
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:22px 20px;margin:16px 0;box-shadow:0 6px 24px -20px rgba(0,31,58,.5);}
+  .card h2{font-family:"Noto Serif TC",serif;font-size:20px;font-weight:700;color:var(--forest-800);margin:0 0 4px;display:flex;align-items:center;gap:10px;}
+  .card h2 .num{font-family:"Noto Sans TC";font-size:14px;font-weight:900;color:#fff;background:var(--forest-600);width:26px;height:26px;border-radius:50%;display:grid;place-items:center;flex:none;}
+  .card .hint{font-size:13px;color:var(--muted);margin:0 0 16px;padding-left:36px;}
+
+  /* Fields */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:560px){.grid{grid-template-columns:1fr;}}
+  .col-full{grid-column:1/-1;}
+  label.f{display:block;font-size:13.5px;font-weight:700;color:var(--bark);margin-bottom:6px;}
+  label.f .req{color:var(--rust);margin-left:3px;}
+  input,select{width:100%;font-family:inherit;font-size:15.5px;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;transition:border-color .15s, box-shadow .15s;}
+  input:focus,select:focus{outline:none;border-color:var(--forest-600);box-shadow:0 0 0 4px rgba(0,48,87,.14);}
+  /* 身分證/居留證號：顯示大寫（實際值於讀取時 normId 轉大寫），不在輸入時改寫 value 以免字元重複 */
+  #emp_idno,.p-idno{text-transform:uppercase;}
+  #emp_idno::placeholder,.p-idno::placeholder{text-transform:none;}
+  .drafthint{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:space-between;background:#eef4fa;border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin-bottom:14px;font-size:13px;color:var(--bark);}
+  .draftclear{flex:none;border:1.5px solid var(--line);background:#fff;color:var(--muted);font-family:inherit;font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:9px;cursor:pointer;}
+  .draftclear:hover{border-color:var(--rust);color:var(--rust);}
+  select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23ff5c39' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:34px;}
+
+  /* 出生年月日 三選單：避免長者按月份倒退翻日曆 */
+  .dob-picker{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:6px;}
+  .dob-picker select{padding:11px 8px 11px 11px;background-position:right 8px center;padding-right:24px;font-size:15px;}
+  .dob-hint{display:block;font-size:11.5px;color:var(--muted);margin-top:4px;line-height:1.4;}
+
+  /* Room type */
+  .rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  @media(max-width:560px){.rooms{grid-template-columns:1fr;}}
+  .room{position:relative;border:1.5px solid var(--line);border-radius:16px;padding:16px 14px;cursor:pointer;background:#fff;transition:.18s;text-align:center;}
+  .room input{position:absolute;opacity:0;pointer-events:none;}
+  .room .big{font-family:"Noto Serif TC";font-size:22px;font-weight:900;color:var(--forest-800);}
+  .room .small{font-size:12.5px;color:var(--muted);margin-top:2px;}
+  .room:hover{border-color:var(--moss);transform:translateY(-2px);}
+  .room.on{border-color:var(--forest-600);background:linear-gradient(180deg,#fff,#e7f0f8);box-shadow:0 8px 22px -16px rgba(0,48,87,.8);}
+  .room.on::after{content:"✓";position:absolute;top:8px;right:10px;color:var(--forest-600);font-weight:900;}
+
+  /* Person cards */
+  .person{border:1.5px solid var(--line);border-radius:16px;padding:18px 14px 14px;margin-bottom:14px;background:linear-gradient(180deg,#ffffff,#f4f8fc);position:relative;}
+  .person .ptag{position:absolute;top:-10px;left:14px;background:var(--forest-700);color:#fff;font-size:12px;font-weight:700;padding:2px 12px;border-radius:999px;letter-spacing:.04em;}
+  .person .price{margin-top:10px;font-size:14px;color:var(--forest-700);font-weight:700;display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--line);padding-top:10px;}
+  .person .price b{font-family:"Noto Serif TC";font-size:20px;}
+  .rm{position:absolute;top:12px;right:12px;border:none;background:#e7eef5;color:var(--rust);width:30px;height:30px;border-radius:9px;font-size:18px;cursor:pointer;line-height:1;transition:.15s;}
+  .rm:hover{background:var(--rust);color:#fff;}
+  .add{width:100%;border:1.5px dashed var(--moss);background:#eaf2fa;color:var(--forest-700);font-family:inherit;font-size:15px;font-weight:700;padding:13px;border-radius:14px;cursor:pointer;transition:.15s;}
+  .add:hover{background:var(--forest-600);color:#fff;border-style:solid;}
+
+  /* segmented toggle 員工/眷屬 */
+  .seg{display:inline-flex;background:#e1e9f1;border-radius:10px;padding:3px;margin-bottom:4px;}
+  .seg label{position:relative;cursor:pointer;}
+  .seg input{position:absolute;opacity:0;pointer-events:none;}
+  .seg span{display:block;padding:6px 16px;border-radius:8px;font-size:14px;font-weight:700;color:var(--bark);transition:.15s;}
+  .seg input:checked + span{background:var(--forest-600);color:#fff;}
+
+  /* Rooming */
+  .roomopt{border:1.5px solid var(--line);border-radius:14px;padding:13px 14px;margin-bottom:10px;cursor:pointer;display:flex;gap:12px;align-items:flex-start;background:#fff;transition:.15s;}
+  .roomopt:hover{border-color:var(--moss);}
+  .roomopt.on{border-color:var(--forest-600);background:#e7f0f8;}
+  .roomopt input{margin-top:3px;width:auto;flex:none;}
+  .roomopt .ot{font-weight:700;color:var(--forest-800);}
+  .roomopt .od{font-size:13px;color:var(--muted);}
+  .roominfo{font-size:14px;border-radius:12px;padding:12px 14px;}
+  .roominfo.full{background:#e7f0f8;color:var(--forest-700);}
+  .roominfo.over{background:#fbe6df;color:#9a3414;font-weight:700;}
+
+  /* Total bar */
+  .totalbar{position:sticky;bottom:14px;margin-top:20px;z-index:5;background:linear-gradient(135deg,var(--forest-800),var(--forest-600));color:#fff;border-radius:18px;padding:16px 20px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .totalbar .breakdown{flex:1;min-width:200px;}
+  .totalbar .brow{display:flex;justify-content:space-between;gap:14px;font-size:13.5px;opacity:.92;padding:1px 0;}
+  .totalbar .brow b{font-weight:700;}
+  .totalbar .brow.sub{color:#ffd9b0;}
+  .totalbar .brow.sur{color:#ffd9cb;}
+  .totalbar .brow.main{margin-top:6px;padding-top:8px;border-top:1px solid rgba(255,255,255,.25);align-items:baseline;font-size:15px;opacity:1;font-weight:700;}
+  .totalbar .amt{font-family:"Noto Serif TC";font-size:28px;font-weight:900;line-height:1;}
+  .totalbar .amt small{font-size:14px;font-weight:500;opacity:.85;margin-left:3px;}
+  .totalbar .bnote{font-size:11.5px;line-height:1.55;color:#ffe3d8;opacity:.95;margin-top:9px;padding-top:8px;border-top:1px dashed rgba(255,255,255,.28);}
+  .submit{background:var(--gold);color:#23200f;border:none;font-family:inherit;font-weight:900;font-size:16px;padding:13px 26px;border-radius:12px;cursor:pointer;letter-spacing:.04em;transition:.15s;box-shadow:0 6px 16px -8px rgba(0,0,0,.5);}
+  .submit:hover{transform:translateY(-2px);background:#e64a28;}
+  .submit:disabled{opacity:.55;cursor:not-allowed;transform:none;}
+
+  .notes{font-size:13px;color:var(--bark);background:#fff1ec;border:1px solid #ffd9cb;border-radius:14px;padding:14px 16px;margin-top:16px;}
+  .notes b{color:var(--rust);}
+  .warn-inline{font-size:12.5px;line-height:1.65;color:#9a3414;background:#fff1ec;border:1px solid #ffd9cb;border-radius:12px;padding:11px 14px;margin:0 0 14px;}
+  .warn-inline b{font-weight:700;}
+  .notes ul{margin:8px 0 0;padding-left:20px;}
+  .notes li{margin-bottom:5px;}
+  .foot{text-align:center;color:var(--muted);font-size:12.5px;margin-top:26px;}
+
+  /* Success overlay */
+  .overlay{position:fixed;inset:0;z-index:50;display:none;place-items:center;padding:24px;background:rgba(0,31,58,.55);backdrop-filter:blur(6px);overflow:auto;}
+  .overlay.show{display:grid;animation:fade .3s ease;}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .modal{background:var(--paper);border-radius:22px;max-width:440px;width:100%;padding:34px 28px;text-align:center;box-shadow:var(--shadow);animation:pop .35s cubic-bezier(.2,.8,.3,1.2);margin:auto;}
+  @keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+  .modal .ic{width:64px;height:64px;margin:0 auto 14px;border-radius:50%;background:#e3eef8;display:grid;place-items:center;}
+  .modal h3{font-family:"Noto Serif TC";color:var(--forest-800);font-size:24px;margin:0 0 8px;}
+  .modal p{color:var(--muted);font-size:14.5px;margin:0 0 20px;}
+  .modal .sum{background:#eef4fa;border-radius:12px;padding:14px;font-size:14px;margin-bottom:18px;text-align:left;}
+  .modal .mhead{font-size:15px;margin-bottom:8px;line-height:1.5;}
+  .modal .mlist{border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);padding:6px 0;margin-bottom:6px;}
+  .modal .mp{display:flex;justify-content:space-between;gap:10px;padding:2px 0;font-size:13.5px;}
+  .modal .mp.tot{padding-top:6px;font-weight:700;}
+  .modal .mp.bal{margin-top:4px;padding-top:6px;border-top:1px solid var(--line);font-weight:900;color:var(--rust);font-size:16px;}
+  .modal .mnote{font-size:12px;color:#9a3414;background:#fff1ec;border:1px solid #ffd9cb;border-radius:9px;padding:9px 11px;margin-top:12px;text-align:left;line-height:1.6;}
+  .modal button{background:var(--forest-700);color:#fff;border:none;font-family:inherit;font-weight:700;font-size:15px;padding:11px 22px;border-radius:11px;cursor:pointer;}
+
+  .err{display:none;background:#fbe6df;border:1px solid #e7a78f;color:#9a3414;border-radius:12px;padding:11px 14px;font-size:14px;margin-top:12px;font-weight:600;}
+  .err.show{display:block;}
+  .closed-banner{display:none;background:#fbe6df;border:1px solid #e7a78f;color:#9a3414;border-radius:16px;padding:15px 18px;margin:0 0 10px;font-weight:700;text-align:center;box-shadow:0 6px 24px -20px rgba(0,31,58,.5);}
 </style>
 </head>
 <body>
-<div class="container">
+<div class="wrap">
 
-  <!-- ===== HERO ===== -->
-  <div class="hero">
-    <svg class="hero-svg" viewBox="0 0 760 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#f7d27e"/>
-          <stop offset="28%" stop-color="#eeb15f"/>
-          <stop offset="52%" stop-color="#cf8a4e"/>
-          <stop offset="100%" stop-color="#6a5f5a"/>
-        </linearGradient>
-        <radialGradient id="sun" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#fff6e0"/>
-          <stop offset="45%" stop-color="#ffe39c"/>
-          <stop offset="100%" stop-color="#ffce6b" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
-      <rect width="760" height="600" fill="url(#sky)"/>
-      <!-- 光暈太陽 -->
-      <circle cx="380" cy="230" r="170" fill="url(#sun)"/>
-      <circle cx="380" cy="230" r="54" fill="#fff4d6"/>
-      <!-- 遠山 -->
-      <path d="M0,320 L120,270 L240,310 L380,255 L520,305 L640,265 L760,300 L760,600 L0,600 Z" fill="#9a7d63" opacity="0.55"/>
-      <path d="M0,370 L150,330 L300,365 L450,325 L600,365 L760,335 L760,600 L0,600 Z" fill="#7a6253" opacity="0.7"/>
-      <!-- 雲海 -->
-      <ellipse cx="180" cy="430" rx="220" ry="42" fill="#fdf6e8" opacity="0.85"/>
-      <ellipse cx="480" cy="450" rx="260" ry="48" fill="#fbf0dd" opacity="0.8"/>
-      <ellipse cx="650" cy="425" rx="180" ry="38" fill="#fdf6e8" opacity="0.75"/>
-      <ellipse cx="330" cy="470" rx="300" ry="55" fill="#fffaf0" opacity="0.9"/>
-      <!-- 前景山稜 -->
-      <path d="M0,490 L180,440 L360,485 L540,438 L760,488 L760,600 L0,600 Z" fill="#4a4640"/>
-    </svg>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-eyebrow">Alishan · Rainy Season Edition</div>
-      <h1 class="hero-title">阿里山家族旅行<br>三日圖文行程</h1>
-      <div class="hero-meta">
-        2026 / 6 / 6 – 6 / 8 <span>·</span> 新竹出發 <span>·</span> 10 人 <span>·</span> 住初旭民宿
-      </div>
-    </div>
+  <div class="langbar notranslate" translate="no">
+    <span class="lg-ic">🌐</span>
+    <button type="button" class="langbtn on" data-lang="" onclick="setLang('')">中文</button>
+    <button type="button" class="langbtn" data-lang="id" onclick="setLang('id')">Bahasa Indonesia</button>
+    <button type="button" class="langbtn" data-lang="vi" onclick="setLang('vi')">Tiếng Việt</button>
   </div>
+  <div id="google_translate_element" style="display:none"></div>
 
-  <!-- ===== 雨季橫幅 ===== -->
-  <div class="weather-banner">
-    <div class="weather-banner-title">☔ 這趟是雨季，但我們準備好了</div>
-    <p>
-      6 月初阿里山降雨機率 <strong>65–90%</strong>，午後雷陣雨是常態。但這正是<strong>雲海最容易出現</strong>的季節——雨歇的空檔，雲霧在茶園間翻騰流動，比大晴天更夢幻。本行程每個重點都附上<strong>晴天版／雨天版</strong>兩種走法，不管當天天氣如何都玩得順。
-    </p>
-  </div>
-
-  <!-- ===== 概要 ===== -->
-  <div class="section" id="top-overview">
-    <div class="section-label">Overview</div>
-    <h2 class="section-heading">旅行一眼看</h2>
-    <div class="overview">
-      <div class="overview-row">
-        <div class="overview-label">核心</div>
-        <div class="overview-content">阿里山日出雲海 + 森林遊樂區小火車 + 奮起湖</div>
-      </div>
-      <div class="overview-row">
-        <div class="overview-label">住宿</div>
-        <div class="overview-content"><strong>初旭民宿</strong>（隙頂 54K · 海拔 1250m · 連住兩晚）</div>
-      </div>
-      <div class="overview-row">
-        <div class="overview-label">日出</div>
-        <div class="overview-content">約 5:10 · 民宿陽台就看得到，不必凌晨衝祝山</div>
-      </div>
-      <div class="overview-row">
-        <div class="overview-label">車程</div>
-        <div class="overview-content">新竹 ↔ 初旭 約 3.5–4 小時（中途嘉義休息 + 午餐）</div>
-      </div>
-      <div class="overview-row">
-        <div class="overview-label">心法</div>
-        <div class="overview-content">雲海、日出隨緣看；雨天有備案，安全第一</div>
-      </div>
-    </div>
-
-    <div class="legend">
-      <div class="legend-item"><span class="legend-badge badge-sun">晴天</span>天氣好的走法</div>
-      <div class="legend-item"><span class="legend-badge badge-rain">雨天</span>下雨的備案</div>
-    </div>
-  </div>
-
-  <!-- ============ DAY 1 ============ -->
-  <div class="day" id="day1">
-    <div class="day-banner">
-      <svg class="day-banner-svg" viewBox="0 0 720 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="d1sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#e9b86a"/>
-            <stop offset="55%" stop-color="#c98f54"/>
-            <stop offset="100%" stop-color="#6f7a6a"/>
-          </linearGradient>
-        </defs>
-        <rect width="720" height="160" fill="url(#d1sky)"/>
-        <circle cx="540" cy="55" r="80" fill="#ffe9b0" opacity="0.5"/>
-        <circle cx="540" cy="55" r="26" fill="#fff3d4"/>
-        <path d="M0,90 L120,68 L260,88 L400,64 L560,86 L720,66 L720,160 L0,160 Z" fill="#8a9478" opacity="0.6"/>
-        <ellipse cx="200" cy="120" rx="180" ry="26" fill="#fdf6e8" opacity="0.8"/>
-        <ellipse cx="520" cy="128" rx="220" ry="30" fill="#fffaf0" opacity="0.85"/>
-        <path d="M0,130 L160,108 L340,128 L520,106 L720,128 L720,160 L0,160 Z" fill="#52564a"/>
+  <header class="hero">
+    <div class="hero-inner">
+      <svg class="okb-logo" viewBox="0 0 313.25 167.46" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OKB 歐克">
+        <path fill="#ff5c39" d="M220.1,146.15v-19.25c-27.09,7.9-65.23,12.95-92.82,12.95s-60.2-3.32-92.82-12.95v19.25c25.58,7.38,62.57,12.4,92.82,12.4s66.77-3.63,92.82-12.4Z"/>
+        <path fill="#fff" d="M280.26,56.11c7.69.98,16.37,8.53,16.37,21.83,0,15.25-9.37,26.02-30.22,26.02h-46.31s0-93.74,0-93.74h46.17c16.93,0,27.7,10.35,27.7,26.02,0,11.89-8.11,18.33-13.71,19.31v.56ZM239.13,49.39h23.78c7.56,0,12.59-4.76,12.59-12.03,0-6.58-5.18-10.91-11.33-10.91h-25.04s0,22.95,0,22.95ZM264.31,87.73c8.53,0,12.87-4.62,12.87-11.61,0-7.14-5.04-11.61-12.17-11.61h-25.88s0,23.22,0,23.22h25.18Z"/>
+        <path fill="#fff" d="M182.74,103.96l-34.82-43.16h-.26v43.16s-22.11,0-22.11,0V10.22s22.11,0,22.11,0v38.13h.4s33.5-38.13,33.5-38.13h25.66s-40.38,43.16-40.38,43.16l42.76,50.58h-26.85Z"/>
+        <path fill="#fff" d="M60.05,6.81c-27.77,0-50.28,22.51-50.28,50.28,0,27.77,22.51,50.28,50.28,50.28,27.77,0,50.28-22.51,50.28-50.28,0-27.77-22.51-50.28-50.28-50.28ZM60.05,86.14c-16.05,0-29.05-13.01-29.05-29.05,0-16.05,13.01-29.05,29.05-29.05,16.05,0,29.05,13.01,29.05,29.05,0,16.05-13.01,29.05-29.05,29.05Z"/>
+        <circle fill="#ff5c39" cx="253.08" cy="133.3" r="13.95"/>
       </svg>
-      <div class="day-banner-overlay">
-        <div class="day-banner-text">
-          <div class="day-num-label">DAY ONE · 抵達 & 夕陽</div>
-          <div class="day-date">6/6（六）上山日</div>
-        </div>
+      <span class="ribbon">🌲 2026 員工旅遊・歡渡員工親子逍遙遊</span>
+      <h1>溪頭森林遊樂區<br/>五星級米堤大飯店 二日遊</h1>
+      <div class="sub"><span translate="no" class="notranslate">訊映光電</span> ｜ 報名費用分攤表</div>
+      <div class="meta">
+        <span><svg class="leaf" viewBox="0 0 24 24" fill="none"><path d="M3 12c0-5 4-9 9-9 5 0 9 4 9 9 0 5-4 9-9 9-5 0-9-4-9-9Z" stroke="#fff" stroke-opacity=".6"/><path d="M8 13c2-3 5-4 8-4" stroke="#fff" stroke-linecap="round"/></svg> 出發日期 <b translate="no">115/10/17（六）～10/18（日）</b></span>
+        <span>🚆 含遊覽車・住宿・二日保險</span>
+        <span id="deadlineSpan" style="visibility:hidden">⏰ 報名截止 <b id="deadlineLbl"></b></span>
       </div>
+      <a class="hero-cta" href="itinerary.html">🗺️ 查看詳細行程 <span class="arr">→</span></a>
+    </div>
+  </header>
+
+  <div class="closed-banner" id="closedBanner">本次報名已截止 ── 目前暫停線上報名，如需補報或修改資料，請聯絡承辦人員。</div>
+
+  <form id="form" novalidate>
+
+    <div id="draftHint" class="drafthint" style="display:none;">
+      <span>📝 系統已自動保留您填寫的內容於<b>本裝置</b>，可放心離開、稍後再回來繼續填。</span>
+      <button type="button" id="draftClear" class="draftclear">清除已填內容</button>
     </div>
 
-    <div class="day-body">
-      <div class="step">
-        <div class="step-time">08:00</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">新竹出發</div>
-          <div class="step-desc">
-            走國道 1 號南下，預估 3.5 小時到嘉義。
-            <span class="step-hint">兩車同行，中途西螺休息站集合、上廁所、伸展一下。</span>
+    <!-- 1 報名人(本人) -->
+    <section class="card">
+      <h2><span class="num">1</span>報名人資料（本人）</h2>
+      <p class="hint">這份報名表的聯絡窗口，同時也是參加的員工本人。眷屬與同住同事請在下方新增。</p>
+      <div class="grid">
+        <div>
+          <label class="f">員工姓名<span class="req">*</span></label>
+          <input id="emp_name" autocomplete="name" placeholder="請輸入您的姓名" />
+        </div>
+        <div>
+          <label class="f">工號<span class="req">*</span></label>
+          <input id="emp_id" placeholder="工號必須與公司名單一致才能報名" />
+        </div>
+        <div>
+          <label class="f">部門<span class="req">*</span></label>
+          <select id="dept"><option value="">請選擇部門</option></select>
+        </div>
+        <div>
+          <label class="f">聯絡手機<span class="req">*</span></label>
+          <input id="phone" type="tel" inputmode="numeric" placeholder="09xx-xxx-xxx" />
+        </div>
+        <div>
+          <label class="f">身分證 / 居留證號<span class="req">*</span></label>
+          <input id="emp_idno" class="notranslate" translate="no" placeholder="投保用。外籍/移工請填居留證統一證號" />
+        </div>
+        <div>
+          <label class="f">出生年月日<span class="req">*</span></label>
+          <div class="dob-picker">
+            <select id="emp_dob_y" aria-label="出生年"><option value="">年</option></select>
+            <select id="emp_dob_m" aria-label="出生月"><option value="">月</option></select>
+            <select id="emp_dob_d" aria-label="出生日"><option value="">日</option></select>
           </div>
+          <input id="emp_dob" type="hidden" />
+          <span class="dob-hint">請依序選擇 西元年 → 月 → 日</span>
+        </div>
+        <div>
+          <label class="f">年齡 / 身分<span class="req">*</span></label>
+          <select id="emp_age"></select>
+        </div>
+        <div>
+          <label class="f">Email（選填）</label>
+          <input id="email" type="email" placeholder="沒有 Email 也沒關係，一樣可以報名。" />
         </div>
       </div>
+      <div class="price" style="margin-top:14px;"><span>本人自付</span><span><b class="p-amt" id="emp_amt">—</b> 元</span></div>
+    </section>
 
-      <div class="step">
-        <div class="step-time">11:30</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">嘉義市區午餐 · 火雞肉飯</div>
-          <div class="step-desc">
-            嘉義必吃火雞肉飯（郭家、劉里長、噴水都是經典），或林聰明沙鍋魚頭。
-            <svg class="scene" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="150" fill="#ede0c8"/>
-              <rect y="100" width="400" height="50" fill="#d8c4a0"/>
-              <!-- 碗 -->
-              <ellipse cx="200" cy="98" rx="78" ry="16" fill="#b89868"/>
-              <path d="M124,92 Q200,150 276,92 Z" fill="#e8e2d4"/>
-              <ellipse cx="200" cy="92" rx="76" ry="15" fill="#f4efe4"/>
-              <!-- 雞肉飯 -->
-              <ellipse cx="200" cy="88" rx="62" ry="11" fill="#f0d9a8"/>
-              <g fill="#c98a4a">
-                <ellipse cx="178" cy="86" rx="16" ry="5"/>
-                <ellipse cx="212" cy="88" rx="18" ry="5"/>
-                <ellipse cx="196" cy="83" rx="14" ry="4"/>
-              </g>
-              <ellipse cx="200" cy="84" rx="8" ry="3" fill="#9a5a2a"/>
-              <!-- 熱氣 -->
-              <g stroke="#fff" stroke-width="3" fill="none" opacity="0.5" stroke-linecap="round">
-                <path d="M180,70 Q174,60 180,50 Q186,40 180,30"/>
-                <path d="M220,70 Q214,60 220,50 Q226,40 220,30"/>
-              </g>
-            </svg>
-            <div class="img-caption">嘉義火雞肉飯（示意）</div>
-            <span class="step-hint">吃飽再上山，山上餐飲選擇少，可順便買點心。</span>
-          </div>
-        </div>
+    <!-- 2 房型 -->
+    <section class="card">
+      <h2><span class="num">2</span>選擇房型</h2>
+      <p class="hint">房型決定同房人數。補助範圍內眷屬自付<b>不分房型</b>；僅「其他（非親屬）」依房型計原價。若房間有空床，下方「住宿安排」會再請你選擇。</p>
+      <div class="rooms" id="rooms">
+        <label class="room"><input type="radio" name="room" value="2" /><div class="big">2 人房</div><div class="small">2 人一間</div></label>
+        <label class="room"><input type="radio" name="room" value="3" /><div class="big">3 人房</div><div class="small">3 人一間</div></label>
+        <label class="room"><input type="radio" name="room" value="4" /><div class="big">4 人房</div><div class="small">4 人一間</div></label>
       </div>
+    </section>
 
-      <div class="step">
-        <div class="step-time">13:30</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">中埔交流道 → 上阿里山公路（台 18 線）</div>
-          <div class="step-desc">
-            開始爬山，嘉義市到初旭約 1 小時 10 分。
-            <span class="step-hint">山路彎多，暈車藥先吃、開慢一點，雨天更要慢。</span>
-          </div>
-        </div>
-      </div>
+    <!-- 3 其他同行者 -->
+    <section class="card">
+      <h2><span class="num">3</span>其他同行者（眷屬／同住同事）</h2>
+      <p class="hint">每位請選「眷屬」或「員工」。眷屬請選對關係（直系／旁系／其他），系統會自動帶出自付額；只有本人可不新增。</p>
+      <div class="warn-inline">⚠️ <b>每位員工只能報名一次</b>：選「員工」加入的同事請<b>勿再自行報名</b>（避免重複投保、計費）；無法一起報名的同事請各自報名，再到下方 <b>「指定同住同事」</b> 註明想同住的人。</div>
+      <div id="people"></div>
+      <button type="button" class="add" id="addBtn">＋ 新增同行者</button>
 
-      <div class="step">
-        <div class="step-time">16:00</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">抵達初旭民宿 Check-in</div>
-          <div class="step-desc">
-            阿里山公路 54K，隙頂。卸行李、休息、喝杯熱茶，適應海拔。
-            <div class="tip-box">
-              <strong>到了先做這件事：</strong>問老闆娘今晚與隔天清晨的天氣狀況、二延平步道入口平台從民宿走過去多遠、晚餐推薦哪間。她是在地人，最準。
-            </div>
-          </div>
-        </div>
+      <div class="notes">
+        <b>費用說明（公司補助後・每人自付額，不分房型）：</b>
+        <ul>
+          <li><b>員工本人：免費</b>（未滿半年之新進同仁，本人自付 5,000 元）。</li>
+          <li><b>直系眷屬</b>（父母、配偶、子女）：每人 <b>2,000 元</b>。</li>
+          <li><b>旁系眷屬</b>（兄弟姊妹、情侶）：每人 <b>5,000 元</b>。</li>
+          <li><b>幼童（2-5 歲不佔床）、2 歲以下：免費</b>（限上述補助範圍內眷屬）。</li>
+          <li><b>其他（非親屬）</b>：不在補助範圍，<b>依旅行社原價</b>計費（金額依房型與年齡，報名時自動試算）。</li>
+          <li>單人獨住雙人房，另加 2,900 元（不列入補助）。</li>
+        </ul>
+        <b>其他注意：</b>
+        <ul>
+          <li>持證件貴賓（長者敬老志工證／身心障礙手冊／學生證）<b>當天需攜帶正本驗證</b>；未帶正本視同成人全票。</li>
+          <li>2-5 歲不佔床、均含餐；2 歲以下不佔床、不含餐及住宿。投保需提供每位身分證字號與出生年月日；外籍人士／移工請填居留證統一證號。</li>
+        </ul>
       </div>
+    </section>
 
-      <div class="step">
-        <div class="step-time">17:00</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">傍晚時光 · 夕陽 / 雲海</div>
-          <div class="step-desc">
-            <div class="weather-split">
-              <div class="split-row sun">
-                <span class="split-tag">晴天</span>
-                <span class="split-text">走幾分鐘到二延平步道入口觀景平台看夕陽、雲海。日落約 18:30，提前半小時到。</span>
-              </div>
-              <div class="split-row rain">
-                <span class="split-tag">雨天</span>
-                <span class="split-text">待在民宿陽台（有遮蔽），泡茶看雲霧在茶園間流動。雨歇時雲海最美，隨時留意天空。</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- 4 住宿安排 -->
+    <section class="card" id="roomingCard" style="display:none;">
+      <h2><span class="num">4</span>住宿安排</h2>
+      <p class="hint notranslate" id="roomingHint" translate="no"></p>
+      <div id="roomingBody" class="notranslate" translate="no"></div>
+    </section>
 
-      <div class="step">
-        <div class="step-time">19:00</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">晚餐 · 回民宿 · 看星空</div>
-          <div class="step-desc">
-            隙頂山產熱炒，或請老闆娘推薦。晴朗的夜可看星空，初夏還有機會遇到螢火蟲尾聲。
-            <span class="step-hint">早點睡，明天清晨看日出。</span>
-          </div>
-        </div>
+    <div class="err notranslate" id="err" translate="no"></div>
+
+    <div class="totalbar">
+      <div class="breakdown">
+        <div class="brow"><span>合計 <b id="cnt">1</b> 位 · 自付小計</span><span>NT$ <b id="total">0</b></span></div>
+        <div class="brow sur" id="surRow" style="display:none;"><span>獨住加價</span><span>+ NT$ <b id="surcharge">0</b></span></div>
+        <div class="brow main"><span>應付金額</span><span class="amt">NT$ <span id="balance">0</span><small>元</small></span></div>
+        <div class="bnote" id="occNote" style="display:none;">※ 補助範圍內眷屬自付不分房型，此即為最終金額；僅「其他（非親屬）」的原價會依最終併房房型計算，可能略有不同，以後續通知為準。</div>
       </div>
+      <button type="submit" class="submit notranslate" id="submitBtn" translate="no">送出報名</button>
     </div>
+  </form>
 
-    <div class="day-summary">
-      <strong>Day 1 重點：</strong>不排太緊，讓長輩小孩適應海拔與路程。傍晚的夕陽 / 雲海是這天的主角，看不看得到都別執著，舒服最重要。
-    </div>
-  </div>
-
-  <!-- ============ DAY 2 ============ -->
-  <div class="day" id="day2">
-    <div class="day-banner">
-      <svg class="day-banner-svg" viewBox="0 0 720 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="d2sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#bcd0b0"/>
-            <stop offset="60%" stop-color="#7d9670"/>
-            <stop offset="100%" stop-color="#46553e"/>
-          </linearGradient>
-        </defs>
-        <rect width="720" height="160" fill="url(#d2sky)"/>
-        <!-- 神木林 -->
-        <g fill="#3f4a37" opacity="0.85">
-          <rect x="80" y="30" width="14" height="130" rx="4"/>
-          <rect x="180" y="15" width="16" height="145" rx="4"/>
-          <rect x="300" y="35" width="13" height="125" rx="4"/>
-          <rect x="430" y="20" width="15" height="140" rx="4"/>
-          <rect x="560" y="40" width="14" height="120" rx="4"/>
-          <rect x="640" y="22" width="15" height="138" rx="4"/>
-        </g>
-        <g fill="#5a6b4c" opacity="0.6">
-          <ellipse cx="87" cy="40" rx="34" ry="26"/>
-          <ellipse cx="188" cy="25" rx="40" ry="30"/>
-          <ellipse cx="306" cy="44" rx="32" ry="24"/>
-          <ellipse cx="437" cy="30" rx="38" ry="28"/>
-          <ellipse cx="567" cy="48" rx="34" ry="25"/>
-          <ellipse cx="647" cy="32" rx="38" ry="27"/>
-        </g>
-        <!-- 霧氣 -->
-        <ellipse cx="260" cy="120" rx="240" ry="28" fill="#e8eee2" opacity="0.55"/>
-        <ellipse cx="540" cy="130" rx="220" ry="26" fill="#eef3e8" opacity="0.5"/>
-        <!-- 鐵軌地面 -->
-        <rect x="0" y="138" width="720" height="22" fill="#3a4233"/>
-        <rect x="0" y="146" width="720" height="3" fill="#8a7a5a" opacity="0.6"/>
-      </svg>
-      <div class="day-banner-overlay">
-        <div class="day-banner-text">
-          <div class="day-num-label">DAY TWO · 精華日</div>
-          <div class="day-date">6/7（日）日出 + 園區 + 奮起湖</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-body">
-      <div class="step">
-        <div class="step-time">05:10</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">民宿陽台看日出</div>
-          <div class="step-desc">
-            6 月初日出約 5:10–5:15。走出房門就看得到，不必出發、不必排隊。
-            <div class="weather-split">
-              <div class="split-row sun">
-                <span class="split-tag">晴天</span>
-                <span class="split-text">太陽從山稜升起，配雲海超美。想要更開闊的人可走幾分鐘到二延平平台。</span>
-              </div>
-              <div class="split-row rain">
-                <span class="split-tag">雨天</span>
-                <span class="split-text">看雲隙曙光與翻騰雲霧也很夢幻；想多睡就睡，不勉強。</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">06:00</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">回房補眠</div>
-          <div class="step-desc">看完日出回房躺一下，長輩小孩可以再睡一輪。</div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">08:00</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">民宿早餐</div>
-          <div class="step-desc">初旭早餐評價很好，吃飽再出發。</div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">09:00</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">出發上阿里山森林遊樂區</div>
-          <div class="step-desc">
-            從初旭開車約 50–60 分鐘到遊客中心停車場。園區內車不能開進去，靠小火車或電動遊園車。
-            <span class="step-hint">途中經過石棹觀景台（台18線62K），有雲海可停 15 分鐘。</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">10:00</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">進園區 · 搭小火車 · 走巨木群</div>
-          <div class="step-desc">
-            門票全票 200 元、65 歲以上 10 元、兒童半票。沼平線小火車單程 100 元。
-            <svg class="scene" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="trainsky" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#cddcc2"/>
-                  <stop offset="100%" stop-color="#8aa07a"/>
-                </linearGradient>
-              </defs>
-              <rect width="400" height="150" fill="url(#trainsky)"/>
-              <!-- 樹 -->
-              <g fill="#3f4a37"><rect x="40" y="20" width="10" height="100"/><rect x="340" y="25" width="11" height="95"/></g>
-              <g fill="#566546" opacity="0.7"><ellipse cx="45" cy="28" rx="26" ry="20"/><ellipse cx="345" cy="32" rx="28" ry="22"/></g>
-              <!-- 地面/鐵軌 -->
-              <rect y="112" width="400" height="38" fill="#5a5040"/>
-              <g stroke="#8a7a5a" stroke-width="3"><line x1="0" y1="120" x2="400" y2="120"/><line x1="0" y1="128" x2="400" y2="128"/></g>
-              <!-- 小火車 -->
-              <rect x="120" y="66" width="150" height="46" rx="8" fill="#a23b2e"/>
-              <rect x="132" y="74" width="28" height="20" rx="3" fill="#f4e9d4"/>
-              <rect x="170" y="74" width="28" height="20" rx="3" fill="#f4e9d4"/>
-              <rect x="208" y="74" width="28" height="20" rx="3" fill="#f4e9d4"/>
-              <rect x="110" y="58" width="34" height="54" rx="6" fill="#7d2b22"/>
-              <circle cx="148" cy="116" r="9" fill="#2b2520"/>
-              <circle cx="200" cy="116" r="9" fill="#2b2520"/>
-              <circle cx="248" cy="116" r="9" fill="#2b2520"/>
-            </svg>
-            <div class="img-caption">阿里山森林小火車（示意）</div>
-            <div class="route-box">
-              <div class="route-box-title">🚂 長輩 & 小孩友善路線（2.5–3 小時）</div>
-              <p>阿里山站 →（小火車）→ <strong>沼平站</strong> → 櫻之道天空步道 → 姊妹潭 → 受鎮宮（午餐）→ <strong>巨木群棧道</strong> → 香林神木 → 神木站 →（小火車）→ 回阿里山站。</p>
-              <p>從高處往低處走，平緩木棧道為主，沒有困難坡段。</p>
-            </div>
-            <div class="weather-split">
-              <div class="split-row sun">
-                <span class="split-tag">晴天</span>
-                <span class="split-text">走完整路線，巨木群、神木、姊妹潭都很好拍。</span>
-              </div>
-              <div class="split-row rain">
-                <span class="split-tag">雨天</span>
-                <span class="split-text">巨木群棧道有樹冠遮雨，小雨中走反而清涼少人；雨大就縮短路線，只搭小火車到沼平拍照、回程，1 小時搞定。</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">12:00</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">園區內午餐</div>
-          <div class="step-desc">受鎮宮、香林服務區有美食街，簡餐、熱湯、山產都有。</div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">14:30</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">出園區 → 開車去奮起湖</div>
-          <div class="step-desc">
-            阿里山園區到奮起湖約 40 分鐘。
-            <div class="tip-box">
-              <strong>彈性備案：</strong>如果園區走得慢或雨太大，奮起湖可改到 Day 3 下山時順遊。不用硬塞。
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">15:30</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">奮起湖老街</div>
-          <div class="step-desc">
-            逛百年老街、吃鐵路便當、檜木甜甜圈、手洗愛玉。
-            <svg class="scene" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="150" fill="#e0d4be"/>
-              <!-- 老街屋頂剪影 -->
-              <g fill="#6a5a44" opacity="0.5">
-                <path d="M0,55 L60,35 L120,55 Z"/>
-                <path d="M90,60 L150,38 L210,60 Z"/>
-                <path d="M190,55 L250,35 L310,55 Z"/>
-                <path d="M290,60 L350,40 L400,60 Z"/>
-              </g>
-              <rect y="58" width="400" height="50" fill="#c9b896" opacity="0.5"/>
-              <rect y="100" width="400" height="50" fill="#b89868"/>
-              <!-- 鐵路便當盒 -->
-              <rect x="135" y="78" width="130" height="56" rx="5" fill="#7a4a2a"/>
-              <rect x="143" y="85" width="114" height="42" rx="3" fill="#e8ddc8"/>
-              <circle cx="175" cy="100" r="13" fill="#d88a4a"/>
-              <rect x="198" y="92" width="26" height="16" rx="3" fill="#c95a3a"/>
-              <ellipse cx="240" cy="100" rx="12" ry="9" fill="#8aa04a"/>
-              <rect x="160" y="114" width="80" height="8" rx="2" fill="#f4efe4"/>
-            </svg>
-            <div class="img-caption">奮起湖老街 & 鐵路便當（示意）</div>
-            <span class="step-hint">老街店家多有遮蔽，雨天逛街吃便當影響不大。</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">17:30</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">回初旭民宿</div>
-          <div class="step-desc">
-            奮起湖到民宿約 45 分鐘。晚上民宿休息。
-            <span class="step-hint">這天很充實，早點睡，明天可再看一次日出。</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-summary">
-      <strong>Day 2 重點：</strong>精華日。阿里山園區小火車 + 巨木群必走，雨天有遮蔽不受影響。<strong>小火車建議前一晚先上阿里山林鐵官網訂票。</strong>奮起湖時間緊可挪 Day 3。
-    </div>
-  </div>
-
-  <!-- ============ DAY 3 ============ -->
-  <div class="day" id="day3">
-    <div class="day-banner">
-      <svg class="day-banner-svg" viewBox="0 0 720 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="d3sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#f0cf86"/>
-            <stop offset="55%" stop-color="#cf9a5e"/>
-            <stop offset="100%" stop-color="#7a7158"/>
-          </linearGradient>
-        </defs>
-        <rect width="720" height="160" fill="url(#d3sky)"/>
-        <circle cx="200" cy="50" r="70" fill="#ffeab2" opacity="0.5"/>
-        <circle cx="200" cy="50" r="24" fill="#fff3d4"/>
-        <!-- 茶園梯田層 -->
-        <path d="M0,95 Q180,78 360,92 T720,88 L720,160 L0,160 Z" fill="#9aa06a" opacity="0.7"/>
-        <path d="M0,115 Q180,100 360,112 T720,108 L720,160 L0,160 Z" fill="#7e8654" opacity="0.8"/>
-        <path d="M0,135 Q180,122 360,132 T720,128 L720,160 L0,160 Z" fill="#636a42"/>
-        <ellipse cx="480" cy="118" rx="200" ry="22" fill="#fdf6e8" opacity="0.55"/>
-      </svg>
-      <div class="day-banner-overlay">
-        <div class="day-banner-text">
-          <div class="day-num-label">DAY THREE · 最後一道曙光</div>
-          <div class="day-date">6/8（一）下山日</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-body">
-      <div class="step">
-        <div class="step-time">05:10</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">陽台看第二次日出（補考機會）</div>
-          <div class="step-desc">昨天沒看到好的，今天補一次；昨天很滿意，今天想睡就睡。</div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">08:30</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">早餐 · 悠閒收行李</div>
-          <div class="step-desc">不趕時間，慢慢吃，在陽台拍最後幾張照片。</div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">10:00</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">退房下山</div>
-          <div class="step-desc">
-            沿台 18 線往嘉義方向。
-            <div class="tip-box">
-              <strong>為什麼早上下山好：</strong>午後雷陣雨多在 13–16 點，早上下山正好避開。萬一遇雨，車內很安全，慢慢開過去就好。
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">11:00</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">中途景點（看天氣二選一）</div>
-          <div class="step-desc">
-            <div class="weather-split">
-              <div class="split-row sun">
-                <span class="split-tag">晴天</span>
-                <span class="split-text">觸口遊客中心 + 逐鹿傳說梅花鹿園，餵鹿、拍小火車，小朋友會很開心。</span>
-              </div>
-              <div class="split-row rain">
-                <span class="split-tag">雨天</span>
-                <span class="split-text">直接到中埔穀倉農創園區（有室內、咖啡廳、星巴克）休息，或半天岩紫雲寺。</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">12:30</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">嘉義 / 中埔午餐</div>
-          <div class="step-desc">中埔穀倉農創園區有草皮、咖啡廳適合休息，或回嘉義市區吃一頓再上國道。</div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">14:00</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">上國道北返新竹</div>
-          <div class="step-desc">預估 3.5 小時，中途西螺或湖口休息站再停一次。</div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-time">17:30</div>
-        <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
-        <div class="step-content">
-          <div class="step-title">回到新竹 · 旅程結束</div>
-          <div class="step-desc">週一傍晚國道通常順，避開下班車潮。</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-summary">
-      <strong>Day 3 重點：</strong>下山日不塞行程。早上下山避開午後雷雨，中途只排一個景點休息，回程讓長輩小孩在車上補眠。
-    </div>
-  </div>
-
-  <!-- ===== 打包清單 ===== -->
-  <div class="packing" id="prep">
-    <h3>🎒 雨季打包清單</h3>
-    <div class="packing-grid">
-      <div class="packing-item"><span class="packing-check">✓</span><span><strong>輕便雨衣</strong>（每人一件，比傘重要，走步道雙手要空）</span></div>
-      <div class="packing-item"><span class="packing-check">✓</span><span><strong>防滑好走的鞋</strong>（步道濕滑，對長輩小孩特別重要）</span></div>
-      <div class="packing-item"><span class="packing-check">✓</span><span><strong>薄外套 / 保暖層</strong>（山區早晚涼，約 22°C）</span></div>
-      <div class="packing-item"><span class="packing-check">✓</span><span><strong>暈車藥</strong>（山路彎多，上山前先吃）</span></div>
-      <div class="packing-item"><span class="packing-check">✓</span><span><strong>一套換洗衣物放車上</strong>（萬一淋濕可換）</span></div>
-      <div class="packing-item"><span class="packing-check">✓</span><span><strong>手電筒 / 手機燈</strong>（清晨看日出、山區夜暗）</span></div>
-      <div class="packing-item"><span class="packing-check">✓</span><span><strong>保溫瓶</strong>（山上喝熱茶熱水很舒服）</span></div>
-      <div class="packing-item"><span class="packing-check">✓</span><span><strong>常備藥、健保卡</strong>（山區醫療資源少）</span></div>
-    </div>
-  </div>
-
-  <!-- ===== 安全提醒 ===== -->
-  <div class="safety">
-    <h3>🚗 雨天 / 霧天行車提醒</h3>
-    <div class="safety-item"><strong>起霧開霧燈：</strong>雲霧飄到路上能見度剩幾公尺，務必開霧燈、放慢車速、與前車保持距離。</div>
-    <div class="safety-item"><strong>濕滑路面：</strong>下坡提早輕踩煞車、不要急轉彎，避免打滑。</div>
-    <div class="safety-item"><strong>打雷時待車內：</strong>汽車是安全避雷場所，雷雨中不要下車站在空曠處或樹下。</div>
-    <div class="safety-item"><strong>早出發、早下山：</strong>避開午後 13–16 點雷雨高峰，行程都排在上午與傍晚。</div>
-    <div class="safety-item"><strong>看雲海不淋雨：</strong>民宿陽台、車上都看得到，要拍無遮蔽全景就穿雨衣（別撐傘，山上風大）。</div>
-  </div>
-
-  <!-- ===== FOOTER ===== -->
-  <div class="footer">
-    <div class="footer-divider"></div>
-    <div class="footer-motto">Keep Exploring, and leave traces.</div>
-    <div class="footer-zh">願這趟阿里山之旅<br>雨裡雲裡，都留下最美的回憶</div>
-  </div>
-
+  <p class="foot"><span translate="no" class="notranslate">訊映光電股份有限公司</span> ｜ 2026 員工旅遊報名系統</p>
 </div>
 
-<!-- ===== 浮動天數導覽列 ===== -->
-<nav class="quicknav" id="quicknav">
-  <a href="#top-overview" data-target="top-overview"><span class="qn-label">Info</span>總覽</a>
-  <a href="#day1" data-target="day1"><span class="qn-label">Day 1</span>第一天</a>
-  <a href="#day2" data-target="day2"><span class="qn-label">Day 2</span>第二天</a>
-  <a href="#day3" data-target="day3"><span class="qn-label">Day 3</span>第三天</a>
-  <a href="#prep" data-target="prep"><span class="qn-label">Pack</span>準備</a>
-</nav>
-
-<a href="#" class="totop" id="totop" aria-label="回到頂端">↑</a>
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <div class="ic"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#1a4a73" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <h3>報名成功！</h3>
+    <p>您的報名資料已送出，承辦同事會收到通知。</p>
+    <div class="sum" id="modalSum"></div>
+    <button type="button" id="closeBtn">再報名一筆</button>
+  </div>
+</div>
 
 <script>
-(function () {
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.quicknav a'));
-  var sections = navLinks.map(function (a) {
-    return document.getElementById(a.getAttribute('data-target'));
-  });
-  var totop = document.getElementById('totop');
-
-  // 平滑捲動 + 回頂端
-  navLinks.forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-      var el = document.getElementById(a.getAttribute('data-target'));
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-  totop.addEventListener('click', function (e) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // 捲動時高亮目前所在天數 + 顯示回頂端
-  function onScroll() {
-    var y = window.scrollY + window.innerHeight * 0.35;
-    var activeIdx = 0;
-    for (var i = 0; i < sections.length; i++) {
-      if (sections[i] && sections[i].offsetTop <= y) activeIdx = i;
-    }
-    navLinks.forEach(function (a, i) {
-      a.classList.toggle('active', i === activeIdx);
-    });
-    totop.classList.toggle('show', window.scrollY > 500);
+/* ============================================================
+   介面語言字典：給「JavaScript 動態跳出」的文字（錯誤提示、按鈕、
+   住宿提示、工號警示）用。靜態內容與動態插入的卡片/視窗由 Google
+   翻譯處理；這些 .textContent 設定的文字 Google 抓不到，故在此手動翻。
+   LANG 由 Google 翻譯 cookie 同步（id=印尼、vi=越南、空=中文）。
+   ============================================================ */
+var LANG = (function(){ var m=document.cookie.match(/googtrans=\/[^/]*\/(\w+)/); return m?m[1]:''; })();
+var I18N = {
+  id:{
+    '報名已截止':'Pendaftaran ditutup',
+    '報名已截止，如需補報或修改資料，請聯絡承辦人員。':'Pendaftaran telah ditutup. Untuk mendaftar susulan atau mengubah data, silakan hubungi petugas.',
+    '請填寫員工姓名。':'Silakan isi nama karyawan.',
+    '請填寫工號。':'Silakan isi ID karyawan.',
+    '請選擇部門。':'Silakan pilih departemen.',
+    '請填寫聯絡手機。':'Silakan isi nomor ponsel.',
+    '請填寫本人出生年月日。':'Silakan isi tanggal lahir Anda.',
+    '請選擇房型。':'Silakan pilih tipe kamar.',
+    '請在「住宿安排」選擇空床如何處理。':'Silakan pilih cara penanganan tempat tidur kosong di bagian "Pengaturan akomodasi".',
+    '請填寫指定同住同事的姓名。':'Silakan isi nama rekan kerja yang ingin sekamar.',
+    '公司安排合住人':'Perusahaan mengatur teman sekamar',
+    '指定同住人':'Tentukan teman sekamar sendiri',
+    '空床由公司安排其他同仁同住（不指定人選），不加價。':'Tempat tidur kosong akan diisi rekan kerja yang diatur perusahaan (tanpa menentukan orang), tanpa biaya tambahan.',
+    '我要自己指定同住的同事，不加價。選此項後，請在下方填寫對方姓名。':'Saya ingin menentukan sendiri rekan sekamar, tanpa biaya tambahan. Setelah memilih ini, isi nama orangnya di bawah.',
+    '我要獨住整間雙人房':'Saya mau menempati sendiri kamar untuk 2 orang',
+    '加價 NT$ {s}（不列入公司補助）。':'Tambah biaya NT$ {s} (tidak termasuk subsidi perusahaan).',
+    '指定同住同事姓名':'Nama rekan kerja yang ingin sekamar',
+    '想同住的同事姓名，多位請以、分隔':'Nama rekan yang ingin sekamar; pisahkan dengan 、 bila lebih dari satu',
+    '填寫本欄時，請<b style="color:var(--rust)">提醒被指定的同事務必自行另外報名、填寫個人資料</b>，公司再依此安排同房。實際房間人數若有出入，承辦會再與您確認。':'Saat mengisi kolom ini, <b style="color:var(--rust)">ingatkan rekan yang Anda sebut untuk tetap mendaftar sendiri dan mengisi data pribadinya</b>. Perusahaan akan mengatur sekamar berdasarkan ini. Bila jumlah orang di kamar berbeda, petugas akan mengonfirmasi kembali.',
+    '目前 {headcount} 人超過所選 {room} 人房（最多 {cap} 人），請改選較大房型，或分成兩筆報名。':'Saat ini {headcount} orang melebihi kapasitas kamar {room} orang (maks. {cap}). Pilih tipe kamar lebih besar atau daftar dalam dua formulir.',
+    '✓ 此 {room} 人房剛好住滿 {cap} 人，無需加購。':'✓ Kamar {room} orang ini tepat terisi {cap} orang, tanpa biaya tambahan.',
+    '送出中…':'Mengirim…',
+    '送出報名':'Kirim pendaftaran',
+    '送出失敗，請檢查網路後再試一次，或聯絡承辦人員。':'Pengiriman gagal. Periksa koneksi internet lalu coba lagi, atau hubungi petugas.',
+    '請填寫身分證字號（投保用）。':'Silakan isi nomor KTP/izin tinggal (untuk asuransi).',
+    '身分證字號檢查碼不符，請確認是否輸入正確。':'Nomor identitas tidak valid, mohon periksa kembali.',
+    '身分證字號格式不正確（應為 1 個英文字母加 9 碼數字）。':'Format nomor identitas salah (harus 1 huruf diikuti 9 angka).',
+    '本人':'Diri sendiri: ',
+    '同行者 {i}':'Pendamping {i}',
+    '{n}：{reason}':'{n}: {reason}',
+    '請填寫{n}的姓名。':'Silakan isi nama {n}.',
+    '請填寫{n}的工號。':'Silakan isi ID karyawan {n}.',
+    '請填寫{n}的出生年月日。':'Silakan isi tanggal lahir {n}.',
+    '目前 {people} 人超過所選 {room} 人房（最多 {cap} 人），請改選較大房型或分兩筆報名。':'Saat ini {people} orang melebihi kapasitas kamar {room} orang (maks. {cap}). Pilih tipe kamar lebih besar atau daftar dalam dua formulir.',
+    '所選 {room} 人房尚有 {empty} 個空床，請選擇空床如何處理。':'Kamar {room} orang yang dipilih masih ada {empty} tempat tidur kosong. Silakan pilih cara penanganannya.',
+    '⚠️ 工號「{x}」不在公司名單中，請確認工號是否正確；未在名單者無法送出報名，若確定無誤請聯絡承辦人加入名單。':'⚠️ ID karyawan "{x}" tidak ada dalam daftar perusahaan. Mohon periksa apakah sudah benar; yang tidak terdaftar tidak dapat mengirim pendaftaran. Jika sudah benar, hubungi petugas untuk menambahkannya.'
+  },
+  vi:{
+    '報名已截止':'Đã đóng đăng ký',
+    '報名已截止，如需補報或修改資料，請聯絡承辦人員。':'Đã hết hạn đăng ký. Nếu cần đăng ký bổ sung hoặc sửa thông tin, vui lòng liên hệ người phụ trách.',
+    '請填寫員工姓名。':'Vui lòng điền tên nhân viên.',
+    '請填寫工號。':'Vui lòng điền mã số nhân viên.',
+    '請選擇部門。':'Vui lòng chọn bộ phận.',
+    '請填寫聯絡手機。':'Vui lòng điền số điện thoại.',
+    '請填寫本人出生年月日。':'Vui lòng điền ngày sinh của bạn.',
+    '請選擇房型。':'Vui lòng chọn loại phòng.',
+    '請在「住宿安排」選擇空床如何處理。':'Vui lòng chọn cách xử lý giường trống ở mục "Sắp xếp chỗ ở".',
+    '請填寫指定同住同事的姓名。':'Vui lòng điền tên đồng nghiệp muốn ở cùng.',
+    '公司安排合住人':'Công ty sắp xếp người ở ghép',
+    '指定同住人':'Tự chỉ định người ở cùng',
+    '空床由公司安排其他同仁同住（不指定人選），不加價。':'Giường trống sẽ do công ty sắp xếp đồng nghiệp khác ở ghép (không chỉ định người), không phụ phí.',
+    '我要自己指定同住的同事，不加價。選此項後，請在下方填寫對方姓名。':'Tôi muốn tự chỉ định đồng nghiệp ở cùng, không phụ phí. Sau khi chọn mục này, hãy điền tên người đó bên dưới.',
+    '我要獨住整間雙人房':'Tôi muốn ở riêng cả phòng đôi',
+    '加價 NT$ {s}（不列入公司補助）。':'Phụ thu NT$ {s} (không tính vào trợ cấp công ty).',
+    '指定同住同事姓名':'Tên đồng nghiệp muốn ở cùng',
+    '想同住的同事姓名，多位請以、分隔':'Tên đồng nghiệp muốn ở cùng; nhiều người ngăn cách bằng 、',
+    '填寫本欄時，請<b style="color:var(--rust)">提醒被指定的同事務必自行另外報名、填寫個人資料</b>，公司再依此安排同房。實際房間人數若有出入，承辦會再與您確認。':'Khi điền mục này, <b style="color:var(--rust)">hãy nhắc đồng nghiệp được chỉ định tự đăng ký riêng và điền thông tin cá nhân</b>. Công ty sẽ sắp xếp ở ghép theo đó. Nếu số người trong phòng chênh lệch, người phụ trách sẽ xác nhận lại với bạn.',
+    '目前 {headcount} 人超過所選 {room} 人房（最多 {cap} 人），請改選較大房型，或分成兩筆報名。':'Hiện có {headcount} người, vượt quá phòng {room} người (tối đa {cap}). Hãy chọn phòng lớn hơn hoặc đăng ký thành hai phiếu.',
+    '✓ 此 {room} 人房剛好住滿 {cap} 人，無需加購。':'✓ Phòng {room} người này vừa đủ {cap} người, không cần phụ thu.',
+    '送出中…':'Đang gửi…',
+    '送出報名':'Gửi đăng ký',
+    '送出失敗，請檢查網路後再試一次，或聯絡承辦人員。':'Gửi thất bại. Vui lòng kiểm tra mạng rồi thử lại, hoặc liên hệ người phụ trách.',
+    '請填寫身分證字號（投保用）。':'Vui lòng điền số CMND/giấy phép cư trú (để mua bảo hiểm).',
+    '身分證字號檢查碼不符，請確認是否輸入正確。':'Số giấy tờ tùy thân không hợp lệ, vui lòng kiểm tra lại.',
+    '身分證字號格式不正確（應為 1 個英文字母加 9 碼數字）。':'Định dạng số giấy tờ không đúng (gồm 1 chữ cái và 9 chữ số).',
+    '本人':'Bản thân: ',
+    '同行者 {i}':'Người đi cùng {i}',
+    '{n}：{reason}':'{n}: {reason}',
+    '請填寫{n}的姓名。':'Vui lòng điền tên {n}.',
+    '請填寫{n}的工號。':'Vui lòng điền mã số nhân viên {n}.',
+    '請填寫{n}的出生年月日。':'Vui lòng điền ngày sinh {n}.',
+    '目前 {people} 人超過所選 {room} 人房（最多 {cap} 人），請改選較大房型或分兩筆報名。':'Hiện có {people} người, vượt quá phòng {room} người (tối đa {cap}). Hãy chọn phòng lớn hơn hoặc đăng ký thành hai phiếu.',
+    '所選 {room} 人房尚有 {empty} 個空床，請選擇空床如何處理。':'Phòng {room} người đã chọn còn {empty} giường trống. Vui lòng chọn cách xử lý.',
+    '⚠️ 工號「{x}」不在公司名單中，請確認工號是否正確；未在名單者無法送出報名，若確定無誤請聯絡承辦人加入名單。':'⚠️ Mã số nhân viên "{x}" không có trong danh sách công ty. Vui lòng kiểm tra lại; người không có trong danh sách không thể gửi đăng ký. Nếu chắc chắn đúng, hãy liên hệ người phụ trách để thêm vào.'
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+};
+function T(s){ return (I18N[LANG] && I18N[LANG][s]) || s; }
+function tf(s, vars){ var t=T(s); for(var k in vars){ t=t.split('{'+k+'}').join(vars[k]); } return t; }
+/* 送出按鈕標題：因標記 translate="no"，於載入時依語言設定文字 */
+(function(){ var b=document.getElementById("submitBtn"); if(b) b.textContent=T("送出報名"); })();
+
+/* ============================================================
+   部署後請填入你的 Google Apps Script 網址
+   ============================================================ */
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbzGE46TFzPMXlfBvT88mLjobexmgnpSlWf_U_Rl2PBzWMUca7_mUc5-pI64F75Kx8ymKg/exec";
+
+/* ── 補助方案（依原案・人頭計，不分房型）──
+   ‧ 滿半年員工：免費；未滿半年員工：本人自付 5,000（由後台工號名單控制）
+   ‧ 直系眷屬（父母／配偶／子女）：每人 2,000
+   ‧ 旁系眷屬（兄弟姊妹／情侶）：每人 5,000
+   ‧ 幼童（2-5 不佔床）、2 歲以下：補助範圍內一律免費
+   ‧ 「其他（非親屬）」：不在補助範圍，依旅行社原價（附件二）計費
+   工號名單（後台「補助設定」分頁）amount 欄＝該員工自付額：0＝滿半年、5000＝未滿半年。 */
+const LINEAL_SELF     = 2000;         // 直系眷屬每人自付
+const COLLATERAL_SELF = 5000;         // 旁系眷屬每人自付
+const LINEAL_REL      = ["配偶","子女（直系）","父母（直系）"];   // 直系
+const OTHER_REL       = "其他（非親屬）";                        // 非補助範圍 → 旅行社原價
+const SINGLE_SURCHARGE = 2900;        // 雙人房獨住加價（不列入補助）
+
+/* 旅行社原價表：房型 → 身分 → 金額（附件二 報名費用分攤表・新版）。僅「其他（非親屬）」按此計費。 */
+const PRICES = {
+  "2": {adult:7035, student:6785, senior:6695, disabled:6655, child25:2000, baby:1500},
+  "3": {adult:5635, student:5385, senior:5295, disabled:5255, child25:1800, baby:1500},
+  "4": {adult:5235, student:4985, senior:4895, disabled:4855, child25:1600, baby:1500},
+};
+const CAP = {"2":2, "3":3, "4":4};
+const AGE_LABELS = {
+  adult:"成人",
+  student:"6-12歲 學生及兒童",
+  senior:"65歲以上長者（持敬老志工證）",
+  disabled:"持身心障礙手冊（含一位陪同）",
+  child25:"2-5歲（不佔床・含餐）",
+  baby:"2歲以下（不佔床・不含餐）",
+};
+const FAMILY_REL = ["配偶","子女（直系）","父母（直系）","兄弟姊妹","情侶","其他（非親屬）"];
+
+/* 部門：由後端「部門設定」分頁動態載入（管理員可在後台 🏢 部門設定 直接編輯）。
+   後端失敗時用內建預設清單，避免報名表壞掉。 */
+const DEFAULT_DEPT_GROUPS = {
+  "獨立單位":["總經理室","稽核室","法規文管部"],
+  "業務處":["業務部","行銷設計部"],
+  "研發處":["研發一部","研發二部"],
+  "製造處":["生技設備部","生產部","資材部"],
+  "品保處":["品檢一課","品檢二課"],
+  "管理處":["行政部","財務部"],
+};
+function renderDeptSelect(groups){
+  const sel = document.getElementById("dept");
+  if(!sel) return;
+  let html = '<option value="">請選擇部門</option>';
+  Object.keys(groups).forEach(function(g){
+    if(!groups[g] || !groups[g].length) return;
+    html += '<optgroup label="'+g+'">';
+    groups[g].forEach(function(d){ html += '<option value="'+g+'／'+d+'">'+d+'</option>'; });
+    html += '</optgroup>';
+  });
+  sel.innerHTML = html;
+}
+renderDeptSelect(DEFAULT_DEPT_GROUPS);   // 先用預設清單，避免網路慢時表單沒選項
+(async function loadDeptsFromBackend(){
+  try{
+    const r = await fetch(ENDPOINT + "?action=deptList&_=" + Date.now(), {credentials:"omit"});
+    const j = await r.json();
+    if(j && j.ok && Array.isArray(j.depts) && j.depts.length){
+      const g = {};
+      j.depts.forEach(function(d){ (g[d.group] = g[d.group] || []).push(d.name); });
+      const prev = document.getElementById("dept").value;
+      renderDeptSelect(g);
+      if(prev) document.getElementById("dept").value = prev;
+    }
+  }catch(e){ /* 失敗時保留預設清單 */ }
 })();
+
+/* 報名截止日期（僅顯示，不自動關閉）＋ 報名開關狀態（由後台控制） */
+let DEADLINE = "";   // 由 server 載入，避免 hardcode 造成「先顯示舊日期、過幾秒才更新」的閃爍
+let SIGNUP_OPEN = true;
+function applyDeadline(s){
+  if(!s) return;
+  DEADLINE = String(s);
+  const el = document.getElementById("deadlineLbl");
+  if(el) el.textContent = DEADLINE;
+  const sp = document.getElementById("deadlineSpan");
+  if(sp) sp.style.visibility = "visible";
+}
+function applyClosed(){
+  const b = document.getElementById("closedBanner"); if(b) b.style.display="block";
+  const btn = document.getElementById("submitBtn"); if(btn){ btn.disabled=true; btn.textContent=T("報名已截止"); }
+}
+(async function checkStatus(){
+  if(!ENDPOINT.startsWith("http")) return;
+  try{
+    const r = await fetch(ENDPOINT + "?action=status&_=" + Date.now(), {credentials:"omit"});
+    const res = await r.json();
+    if(res && res.ok){
+      if(res.open === false){ SIGNUP_OPEN=false; applyClosed(); }
+      if(res.deadline) applyDeadline(res.deadline);
+    }
+  }catch(e){}
+})();
+
+function ageOptions(){ return Object.entries(AGE_LABELS).map(([v,l])=>`<option value="${v}">${l}</option>`).join(""); }
+const fmt = n => Number(n||0).toLocaleString("en-US");
+const peopleEl = document.getElementById("people");
+
+/* ---- 工號查詢（任職身分／自付額，依工號）----
+ *  「補助設定」分頁＝正式員工名單；amount 欄現為員工自付額（0＝滿半年免費、5000＝未滿半年）。
+ *  工號沒對到 → 送出時擋下（無法報名）；輸入時 UI 也會顯示紅字警示。 */
+const subsidyCache = {};        // empId(uppercased) -> { amount, found }
+function _normEmpId(s){ return String(s||"").trim().toUpperCase(); }
+function fetchSubsidy(empId){
+  const id = _normEmpId(empId);
+  if(!id || !ENDPOINT.startsWith("http")) { updateEmpIdWarnings(); recalc(); return; }
+  if(subsidyCache.hasOwnProperty(id)) { updateEmpIdWarnings(); recalc(); return; }
+  fetch(ENDPOINT + "?empId=" + encodeURIComponent(id) + "&_=" + Date.now(), {credentials:"omit"})
+    .then(r=>r.json())
+    .then(res=>{
+      if(res && res.ok && typeof res.subsidy === "number"){
+        subsidyCache[id] = { amount: res.subsidy, found: !!res.found };
+      }
+      updateEmpIdWarnings(); recalc();
+    })
+    .catch(()=>{ updateEmpIdWarnings(); recalc(); });
+}
+function subsidyOf(empId){
+  const id = _normEmpId(empId);
+  const c = subsidyCache[id];
+  return c ? Number(c.amount)||0 : 0;
+}
+function subsidyKnown(empId){
+  /* 工號查過，且 backend 回報 found=true，才算已知工號。沒查過或 found=false 都當未知。 */
+  const id = _normEmpId(empId);
+  const c = subsidyCache[id];
+  return !!(c && c.found);
+}
+/* 顯示／隱藏「工號未在補助名單」的紅字警示 */
+function setEmpIdWarning(inputEl, msg){
+  if(!inputEl) return;
+  let w = inputEl.parentElement.querySelector(".empid-warn");
+  if(!w){
+    w = document.createElement("div");
+    w.className = "empid-warn";
+    w.style.cssText = "color:#9a3414;background:#fbe6df;border:1px solid #e7a78f;border-radius:8px;padding:6px 10px;font-size:12.5px;margin-top:6px;line-height:1.55;";
+    w.setAttribute("translate","no"); w.className += " notranslate";
+    inputEl.parentElement.appendChild(w);
+  }
+  if(msg){ w.textContent = msg; w.style.display = "block"; inputEl.style.borderColor = "#e7a78f"; }
+  else { w.style.display = "none"; inputEl.style.borderColor = ""; }
+}
+function checkOneEmpIdWarning(inputEl){
+  if(!inputEl) return;
+  const id = _normEmpId(inputEl.value);
+  if(!id){ setEmpIdWarning(inputEl, ""); return; }
+  const c = subsidyCache[id];
+  if(!c){ setEmpIdWarning(inputEl, ""); return; }                  // 還沒查到，先不警告
+  if(c.found){ setEmpIdWarning(inputEl, ""); return; }              // 在名單裡 ✓
+  setEmpIdWarning(inputEl, tf("⚠️ 工號「{x}」不在公司名單中，請確認工號是否正確；未在名單者無法送出報名，若確定無誤請聯絡承辦人加入名單。", {x:inputEl.value.trim()}));
+}
+function updateEmpIdWarnings(){
+  checkOneEmpIdWarning(document.getElementById("emp_id"));
+  document.querySelectorAll(".p-empid").forEach(checkOneEmpIdWarning);
+}
+
+/* ---- 其他同行者卡片 ---- */
+let _personSeq = 0;
+function addPerson(){
+  const div = document.createElement("div");
+  div.className = "person";
+  const tName = "ptype_" + (++_personSeq);   // 同一張卡片兩顆 radio 共用 name 才會互斥
+  div.innerHTML = `
+    <span class="ptag">同行者</span>
+    <button type="button" class="rm" title="移除">×</button>
+    <div class="seg">
+      <label><input type="radio" name="${tName}" class="p-type" value="family" checked /><span>眷屬</span></label>
+      <label><input type="radio" name="${tName}" class="p-type" value="employee" /><span>員工</span></label>
+    </div>
+    <div class="grid" style="margin-top:8px;">
+      <div>
+        <label class="f">姓名<span class="req">*</span></label>
+        <input class="p-name" placeholder="同行者姓名" />
+      </div>
+      <div class="cond-family">
+        <label class="f">與本人關係<span class="req">*</span></label>
+        <select class="p-rel">${FAMILY_REL.map(r=>`<option value="${r}">${r}</option>`).join("")}</select>
+      </div>
+      <div class="cond-emp" style="display:none;">
+        <label class="f">工號<span class="req">*</span></label>
+        <input class="p-empid" placeholder="工號（須與公司名單一致）" />
+      </div>
+      <div>
+        <label class="f">身分證 / 居留證號<span class="req">*</span></label>
+        <input class="p-idno notranslate" translate="no" placeholder="投保用。外籍請填居留證號" />
+      </div>
+      <div>
+        <label class="f">出生年月日<span class="req">*</span></label>
+        <div class="dob-picker">
+          <select class="p-dob-y" aria-label="出生年"><option value="">年</option></select>
+          <select class="p-dob-m" aria-label="出生月"><option value="">月</option></select>
+          <select class="p-dob-d" aria-label="出生日"><option value="">日</option></select>
+        </div>
+        <input class="p-dob" type="hidden" />
+        <span class="dob-hint">請依序選擇 西元年 → 月 → 日</span>
+      </div>
+      <div class="col-full">
+        <label class="f">年齡 / 身分<span class="req">*</span></label>
+        <select class="p-age">${ageOptions()}</select>
+      </div>
+    </div>
+    <div class="price"><span>自付</span><span><b class="p-amt">—</b> 元</span></div>
+  `;
+  peopleEl.appendChild(div);
+
+  // type toggle
+  div.querySelectorAll(".p-type").forEach(r=>r.addEventListener("change", ()=>{
+    const isEmp = div.querySelector(".p-type:checked").value === "employee";
+    div.querySelector(".cond-family").style.display = isEmp ? "none" : "";
+    div.querySelector(".cond-emp").style.display = isEmp ? "" : "none";
+    recalc();
+  }));
+  div.querySelector(".p-age").addEventListener("change", recalc);
+  div.querySelector(".p-rel").addEventListener("change", recalc);
+  div.querySelector(".p-name").addEventListener("input", ()=>{});
+  let t=null;
+  div.querySelector(".p-empid").addEventListener("input", (e)=>{ clearTimeout(t); const v=e.target.value; t=setTimeout(()=>fetchSubsidy(v), 400); });
+  wireIdInput(div.querySelector(".p-idno"));
+  setupDobPicker(div.querySelector(".p-dob-y"), div.querySelector(".p-dob-m"), div.querySelector(".p-dob-d"), div.querySelector(".p-dob"));
+  div.querySelector(".rm").addEventListener("click", ()=>{ div.remove(); renumber(); recalc(); });
+  renumber();
+  recalc();
+}
+function renumber(){ [...peopleEl.children].forEach((p,i)=> p.querySelector(".ptag").textContent = `同行者 ${i+1}`); }
+
+/* 出生年月日 三選單：避免長者按月份倒退翻日曆。輸出 YYYY-MM-DD 到 hidden input，跟原本 <input type="date"> 同格式，不影響試算表結構。 */
+const DOB_YEAR_MAX = 2026, DOB_YEAR_MIN = 1930;
+function pad2(n){ n = String(n); return n.length<2 ? '0'+n : n; }
+function daysInMonth(y, m){
+  if(!y || !m) return 31;
+  return new Date(Number(y), Number(m), 0).getDate();
+}
+function setupDobPicker(ySel, mSel, dSel, hidden){
+  // 年（西元，新到舊）
+  let yh = '<option value="">年</option>';
+  for(let y=DOB_YEAR_MAX; y>=DOB_YEAR_MIN; y--) yh += '<option value="'+y+'">'+y+'</option>';
+  ySel.innerHTML = yh;
+  // 月
+  let mh = '<option value="">月</option>';
+  for(let m=1; m<=12; m++) mh += '<option value="'+pad2(m)+'">'+m+' 月</option>';
+  mSel.innerHTML = mh;
+  // 日（先放滿 31 天，月年確定後再調整）
+  refillDays(ySel, mSel, dSel);
+
+  function sync(){
+    const y = ySel.value, m = mSel.value, d = dSel.value;
+    hidden.value = (y && m && d) ? (y + '-' + m + '-' + d) : '';
+    hidden.dispatchEvent(new Event('input', {bubbles:true}));
+    hidden.dispatchEvent(new Event('change', {bubbles:true}));
+  }
+  ySel.addEventListener('change', function(){ refillDays(ySel, mSel, dSel); sync(); });
+  mSel.addEventListener('change', function(){ refillDays(ySel, mSel, dSel); sync(); });
+  dSel.addEventListener('change', sync);
+}
+function refillDays(ySel, mSel, dSel){
+  const dn = daysInMonth(ySel.value, mSel.value);
+  const prev = dSel.value;
+  let dh = '<option value="">日</option>';
+  for(let d=1; d<=dn; d++) dh += '<option value="'+pad2(d)+'">'+d+' 日</option>';
+  dSel.innerHTML = dh;
+  if(prev && Number(prev) <= dn) dSel.value = prev;
+}
+/* 本人（靜態 DOM）的出生年月日選單 */
+setupDobPicker(document.getElementById("emp_dob_y"), document.getElementById("emp_dob_m"),
+               document.getElementById("emp_dob_d"), document.getElementById("emp_dob"));
+
+function selectedRoom(){ const r=document.querySelector('input[name="room"]:checked'); return r?r.value:null; }
+
+/* ---- 讀取所有人 ---- */
+function readPeople(){
+  const out = [];
+  // 本人
+  out.push({
+    self:true, type:"employee", name:document.getElementById("emp_name").value.trim(),
+    relationship:"員工本人", empId:document.getElementById("emp_id").value.trim(),
+    age:document.getElementById("emp_age").value, idNumber:normId(document.getElementById("emp_idno").value),
+    dob:document.getElementById("emp_dob").value, el:document.getElementById("emp_amt")
+  });
+  [...peopleEl.children].forEach(p=>{
+    const type = p.querySelector(".p-type:checked").value;
+    out.push({
+      self:false, type,
+      name:p.querySelector(".p-name").value.trim(),
+      relationship: type==="employee" ? "其他員工" : p.querySelector(".p-rel").value,
+      empId: type==="employee" ? p.querySelector(".p-empid").value.trim() : "",
+      age:p.querySelector(".p-age").value,
+      idNumber:normId(p.querySelector(".p-idno").value),
+      dob:p.querySelector(".p-dob").value,
+      el:p.querySelector(".p-amt")
+    });
+  });
+  return out;
+}
+
+/* ---- 住宿安排 ---- */
+let occupancy = null;   // 'company' | 'single' | 'full' | null
+let roommate = "";      // 指定同住同事姓名（選填，僅 company 時送出）
+function renderRooming(headcount){
+  const room = selectedRoom();
+  const card = document.getElementById("roomingCard");
+  const body = document.getElementById("roomingBody");
+  const hint = document.getElementById("roomingHint");
+  if(!room){ card.style.display="none"; occupancy=null; return 0; }
+  const cap = CAP[room]; const empty = cap - headcount;
+  card.style.display = "";
+  if(headcount > cap){
+    occupancy = null;
+    hint.textContent = "";
+    body.innerHTML = `<div class="roominfo over">${tf("目前 {headcount} 人超過所選 {room} 人房（最多 {cap} 人），請改選較大房型，或分成兩筆報名。", {headcount:headcount, room:room, cap:cap})}</div>`;
+    return 0;
+  }
+  if(empty === 0){
+    occupancy = "full";
+    hint.textContent = "";
+    body.innerHTML = `<div class="roominfo full">${tf("✓ 此 {room} 人房剛好住滿 {cap} 人，無需加購。", {room:room, cap:cap})}</div>`;
+    return 0;
+  }
+  // empty >= 1
+  hint.textContent = tf("所選 {room} 人房尚有 {empty} 個空床，請選擇空床如何處理。", {room:room, empty:empty});
+  let opts = `
+    <label class="roomopt" data-v="company">
+      <input type="radio" name="occ" value="company" />
+      <div><div class="ot">${T("公司安排合住人")}</div><div class="od">${T("空床由公司安排其他同仁同住（不指定人選），不加價。")}</div></div>
+    </label>
+    <label class="roomopt" data-v="assign">
+      <input type="radio" name="occ" value="assign" />
+      <div><div class="ot">${T("指定同住人")}</div><div class="od">${T("我要自己指定同住的同事，不加價。選此項後，請在下方填寫對方姓名。")}</div></div>
+    </label>`;
+  if(room === "2" && headcount === 1){
+    opts += `
+    <label class="roomopt" data-v="single">
+      <input type="radio" name="occ" value="single" />
+      <div><div class="ot">${T("我要獨住整間雙人房")}</div><div class="od">${tf("加價 NT$ {s}（不列入公司補助）。", {s:fmt(SINGLE_SURCHARGE)})}</div></div>
+    </label>`;
+  }
+  opts += `
+    <div id="roommateWrap" style="display:none;margin-top:6px;">
+      <label class="f" style="margin-bottom:4px;">${T("指定同住同事姓名")}</label>
+      <input id="roommateName" placeholder="${T("想同住的同事姓名，多位請以、分隔")}" />
+      <span class="dob-hint">${T('填寫本欄時，請<b style="color:var(--rust)">提醒被指定的同事務必自行另外報名、填寫個人資料</b>，公司再依此安排同房。實際房間人數若有出入，承辦會再與您確認。')}</span>
+    </div>`;
+  body.innerHTML = opts;
+  // restore / wire
+  body.querySelectorAll('input[name="occ"]').forEach(r=>{
+    if(r.value === occupancy) r.checked = true;
+    r.addEventListener("change", ()=>{
+      occupancy = r.value;
+      body.querySelectorAll(".roomopt").forEach(o=>o.classList.toggle("on", o.dataset.v===occupancy));
+      recalc();
+    });
+  });
+  if(occupancy==="full" || occupancy===null || (occupancy==="single" && !(room==="2"&&headcount===1))) occupancy = null;
+  body.querySelectorAll(".roomopt").forEach(o=>o.classList.toggle("on", o.dataset.v===occupancy));
+  const rmWrap = body.querySelector("#roommateWrap");
+  const rmInput = body.querySelector("#roommateName");
+  if(rmWrap && rmInput){
+    rmWrap.style.display = (occupancy==="assign") ? "" : "none";
+    rmInput.value = roommate;
+    rmInput.addEventListener("input", e=>{ roommate = e.target.value; });
+  }
+  return occupancy==="single" ? SINGLE_SURCHARGE : 0;
+}
+
+/* 每人自付額（依原案・人頭計，不分房型）。price=旅行社原價、self=自付、subsidy=公司補助 */
+function personCost(p, room){
+  const price = PRICES[room][p.age];               // 旅行社原價（附件二）
+  let self;
+  if(p.type!=="employee" && p.relationship===OTHER_REL){
+    self = price;                                  // 其他（非親屬）→ 旅行社原價全額自費
+  } else if(p.age==="child25" || p.age==="baby"){
+    self = 0;                                       // 補助範圍內：幼童（2-5）／2歲以下免費
+  } else if(p.type==="employee"){
+    self = subsidyOf(p.empId);                      // 名單金額：0＝滿半年免費、5000＝未滿半年
+  } else if(LINEAL_REL.indexOf(p.relationship)>=0){
+    self = LINEAL_SELF;                             // 直系眷屬 2,000
+  } else {
+    self = COLLATERAL_SELF;                         // 旁系（兄弟姊妹／情侶）5,000
+  }
+  self = Math.max(0, Math.min(self, price));        // 自付不超過原價
+  return {price, self, subsidy: price - self};
+}
+
+/* ---- 計算 ---- */
+function recalc(){
+  const room = selectedRoom();
+  const people = readPeople();
+  let selfTotal=0;
+  people.forEach(p=>{
+    if(room){
+      const c = personCost(p, room);
+      selfTotal += c.self;
+      if(p.el) p.el.textContent = fmt(c.self);
+    } else if(p.el){ p.el.textContent = "—"; }
+  });
+  const surcharge = renderRooming(people.length);
+  const balance = selfTotal + surcharge;
+  document.getElementById("cnt").textContent = people.length;
+  document.getElementById("total").textContent = fmt(selfTotal);
+  document.getElementById("surcharge").textContent = fmt(surcharge);
+  document.getElementById("surRow").style.display = surcharge>0 ? "" : "none";
+  document.getElementById("occNote").style.display = (occupancy==="company"||occupancy==="assign") ? "" : "none";
+  document.getElementById("balance").textContent = fmt(balance);
+}
+
+/* room visuals */
+document.querySelectorAll('input[name="room"]').forEach(r=>{
+  r.addEventListener("change", ()=>{
+    document.querySelectorAll(".room").forEach(x=>x.classList.remove("on"));
+    r.closest(".room").classList.add("on");
+    occupancy=null;
+    recalc();
+  });
+});
+document.getElementById("emp_age").innerHTML = ageOptions();
+["emp_name","dept","phone","emp_idno","emp_dob","emp_age"].forEach(id=>document.getElementById(id).addEventListener("input", recalc));
+document.getElementById("emp_age").addEventListener("change", recalc);
+let _et=null;
+document.getElementById("emp_id").addEventListener("input",(e)=>{ clearTimeout(_et); const v=e.target.value; _et=setTimeout(()=>fetchSubsidy(v),400); });
+wireIdInput(document.getElementById("emp_idno"));
+document.getElementById("addBtn").addEventListener("click", addPerson);
+document.getElementById("closeBtn").addEventListener("click", ()=>document.getElementById("overlay").classList.remove("show"));
+recalc();
+
+/* ---- submit ---- */
+const errEl = document.getElementById("err");
+function showErr(m){ errEl.textContent=m; errEl.classList.add("show"); errEl.scrollIntoView({behavior:"smooth",block:"center"}); }
+function clearErr(){ errEl.classList.remove("show"); }
+/* 身分證字號防呆（含檢查碼驗證）
+   - 本國身分證 & 2021後新式居留證統一證號：1字母 + 9碼數字，驗檢查碼
+   - 舊式外僑居留證：2字母 + 8碼數字，僅驗格式（避免誤擋外籍眷屬）*/
+const ID_LETTER = {A:10,B:11,C:12,D:13,E:14,F:15,G:16,H:17,I:34,J:18,K:19,L:20,M:21,N:22,O:35,P:23,Q:24,R:25,S:26,T:27,U:28,V:29,W:32,X:30,Y:31,Z:33};
+function normId(v){ return (v||"").trim().toUpperCase().replace(/\s+/g,""); }
+function checkTwId(raw){
+  const v = normId(raw);
+  if(!v) return {ok:false, reason:"請填寫身分證字號（投保用）。"};
+  if(/^[A-Z][0-9]\d{8}$/.test(v)){
+    const n = ID_LETTER[v[0]];
+    let sum = Math.floor(n/10) + (n%10)*9;
+    const w = [8,7,6,5,4,3,2,1,1];
+    for(let i=0;i<9;i++) sum += parseInt(v[i+1],10)*w[i];
+    return sum%10===0 ? {ok:true} : {ok:false, reason:"身分證字號檢查碼不符，請確認是否輸入正確。"};
+  }
+  if(/^[A-Z][A-D]\d{8}$/.test(v)) return {ok:true}; // 舊式外僑居留證
+  return {ok:false, reason:"身分證字號格式不正確（應為 1 個英文字母加 9 碼數字）。"};
+}
+/* 即時防呆：失焦時顯示紅框。
+   顯示大寫改由 CSS text-transform 處理、實際值於讀取時以 normId() 轉大寫；
+   不在 input 事件重寫 el.value，避免（尤其含 Google 翻譯觀察器時）出現「打一個字母變兩個」的字元重複。 */
+function wireIdInput(el){
+  el.addEventListener("blur", ()=>{
+    const v=el.value.trim();
+    const chk = v ? checkTwId(v) : {ok:true};
+    el.style.borderColor = chk.ok ? "" : "var(--rust)";
+    setIdError(el, chk.ok ? "" : T(chk.reason));
+  });
+  // 重新輸入時先清掉紅框與錯誤說明（此監聽器不改寫 value，不會造成字元重複）
+  el.addEventListener("input", ()=>{ el.style.borderColor = ""; setIdError(el, ""); });
+}
+/* 在身分證欄位下方顯示／隱藏一行紅色錯誤說明 */
+function setIdError(el, msg){
+  let w = el.parentElement.querySelector(".idno-err");
+  if(!w){
+    w = document.createElement("div");
+    w.className = "idno-err notranslate";
+    w.setAttribute("translate","no");
+    w.style.cssText = "color:var(--rust);font-size:12px;margin-top:5px;line-height:1.5;";
+    el.parentElement.appendChild(w);
+  }
+  if(msg){ w.textContent = msg; w.style.display = "block"; }
+  else { w.textContent = ""; w.style.display = "none"; }
+}
+
+document.getElementById("form").addEventListener("submit", async (e)=>{
+  e.preventDefault(); clearErr();
+  if(!SIGNUP_OPEN) return showErr(T("報名已截止，如需補報或修改資料，請聯絡承辦人員。"));
+  const room = selectedRoom();
+  const people = readPeople();
+  const emp = people[0];
+
+  if(!emp.name) return showErr(T("請填寫員工姓名。"));
+  if(!emp.empId) return showErr(T("請填寫工號。"));
+  if(!subsidyKnown(emp.empId)) return showErr(tf("工號「{x}」不在公司名單中，請確認工號是否正確（若剛輸入，請稍候 1～2 秒再送出）。", {x:emp.empId}));
+  if(!document.getElementById("dept").value.trim()) return showErr(T("請選擇部門。"));
+  if(!document.getElementById("phone").value.trim()) return showErr(T("請填寫聯絡手機。"));
+  const empId = checkTwId(emp.idNumber);
+  if(!empId.ok) return showErr(T("本人") + T(empId.reason));
+  if(!emp.dob) return showErr(T("請填寫本人出生年月日。"));
+  if(!room) return showErr(T("請選擇房型。"));
+
+  for(let i=1;i<people.length;i++){
+    const p=people[i], n=tf("同行者 {i}", {i:i});
+    if(!p.name) return showErr(tf("請填寫{n}的姓名。", {n:n}));
+    if(p.type==="employee" && !p.empId) return showErr(tf("請填寫{n}的工號。", {n:n}));
+    if(p.type==="employee" && !subsidyKnown(p.empId)) return showErr(tf("{n}：工號「{x}」不在公司名單中，請確認工號是否正確。", {n:n, x:p.empId}));
+    const idChk = checkTwId(p.idNumber);
+    if(!idChk.ok) return showErr(tf("{n}：{reason}", {n:n, reason:T(idChk.reason)}));
+    if(!p.dob) return showErr(tf("請填寫{n}的出生年月日。", {n:n}));
+  }
+
+  const cap = CAP[room];
+  if(people.length > cap) return showErr(tf("目前 {people} 人超過所選 {room} 人房（最多 {cap} 人），請改選較大房型或分兩筆報名。", {people:people.length, room:room, cap:cap}));
+  const empty = cap - people.length;
+  if(empty >= 1 && !occupancy) return showErr(T("請在「住宿安排」選擇空床如何處理。"));
+  const roommateName = (occupancy==="assign") ? roommate.trim() : "";
+  if(occupancy==="assign" && !roommateName) return showErr(T("請填寫指定同住同事的姓名。"));
+
+  const surcharge = occupancy==="single" ? SINGLE_SURCHARGE : 0;
+  // 後端／看板沿用「公司安排合住人」前綴；指定者加上姓名（不需更動 Google 試算表欄位）
+  let occLabel = occupancy==="single" ? "獨住加價" : ((occupancy==="company"||occupancy==="assign") ? "公司安排合住人" : "住滿");
+  if(roommateName) occLabel += `（指定同住：${roommateName}）`;
+  // 依原案・人頭計：每人自付＝personCost().self；price＝旅行社原價；subsidy＝price−self（供後台財務欄）
+  let total=0, subsidy=0;
+  const outPeople = people.map(p=>{
+    const c = personCost(p, room);
+    total += c.price; subsidy += c.subsidy;
+    return {type:p.type, name:p.name, relationship:p.relationship, empId:p.empId,
+            age:p.age, ageLabel:AGE_LABELS[p.age], idNumber:p.idNumber, dob:p.dob,
+            price:c.price, self:c.self, subsidy:c.subsidy};
+  });
+  const selfTotal = total - subsidy;
+  const balance = selfTotal + surcharge;
+
+  const payload = {
+    regId: "R" + Date.now().toString(36).toUpperCase() + Math.random().toString(36).slice(2,5).toUpperCase(),
+    timestamp:new Date().toISOString(),
+    contactName:emp.name, dept:document.getElementById("dept").value.trim(),
+    phone:document.getElementById("phone").value.trim(), email:document.getElementById("email").value.trim(),
+    room, roomLabel:room+"人房", occupancy:occLabel, roommate:roommateName, surcharge,
+    headcount:people.length, total, subsidy, balance,
+    people:outPeople,
+  };
+
+  const btn=document.getElementById("submitBtn");
+  btn.disabled=true; btn.textContent=T("送出中…");
+  try{
+    if(ENDPOINT.startsWith("http")){
+      await fetch(ENDPOINT,{method:"POST",mode:"no-cors",credentials:"omit",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload)});
+    } else { await new Promise(r=>setTimeout(r,400)); }
+    const rows = outPeople.map(p=>`<div class="mp"><span>${p.name}（${p.type==="employee"?"員工":p.relationship}・${p.ageLabel}）</span><span>${fmt(p.self)}</span></div>`).join("");
+    document.getElementById("modalSum").innerHTML =
+      `<div class="mhead"><b>${emp.name}</b> ・ ${document.getElementById("dept").value.trim()}<br/>
+        <span style="color:#6b7a89">${room} 人房 ｜ 共 ${people.length} 位 ｜ ${occLabel}</span></div>
+       <div class="mlist">${rows}</div>
+       <div class="mp tot"><span>自付小計</span><span>NT$ ${fmt(selfTotal)}</span></div>
+       ${surcharge>0?`<div class="mp"><span>獨住加價</span><span>+ NT$ ${fmt(surcharge)}</span></div>`:""}
+       <div class="mp bal"><span>應付金額</span><span>NT$ ${fmt(balance)} 元</span></div>
+       ${(occupancy==="company"||occupancy==="assign")?`<div class="mnote">※ 補助範圍內眷屬自付不分房型，此即為最終金額；僅「其他（非親屬）」的原價會依最終併房房型計算，可能略有不同，以後續通知為準。</div>`:""}`;
+    document.getElementById("overlay").classList.add("show");
+    // reset
+    document.getElementById("form").reset();
+    document.querySelectorAll(".room").forEach(x=>x.classList.remove("on"));
+    document.getElementById("emp_age").innerHTML = ageOptions();
+    peopleEl.innerHTML=""; occupancy=null; roommate=""; recalc();
+    clearDraft(); showDraftHint(false);   // 送出成功 → 清掉草稿
+  }catch(err){ showErr(T("送出失敗，請檢查網路後再試一次，或聯絡承辦人員。")); }
+  finally{ btn.disabled=false; btn.textContent=T("送出報名"); }
+});
+
+/* ===== 自動儲存草稿（localStorage・此裝置）===== */
+const DRAFT_KEY = "okb_travel_draft_v1";
+const DRAFT_TTL = 21*24*3600*1000;   // 21 天後過期
+let _restoring = false, _draftTimer = null;
+function _v(id){ const e=document.getElementById(id); return e?e.value:""; }
+function _sv(id,val){ const e=document.getElementById(id); if(e) e.value = (val==null?"":val); }
+function showDraftHint(show){ const h=document.getElementById("draftHint"); if(h) h.style.display = show?"":"none"; }
+function serializeDraft(){
+  return {
+    t: Date.now(),
+    emp:{ name:_v("emp_name"), empId:_v("emp_id"), dept:_v("dept"), phone:_v("phone"),
+          idno:_v("emp_idno"), email:_v("email"), age:_v("emp_age"),
+          dy:_v("emp_dob_y"), dm:_v("emp_dob_m"), dd:_v("emp_dob_d") },
+    room: selectedRoom(), occupancy: occupancy, roommate: roommate,
+    people: [...peopleEl.children].map(function(p){
+      return { type:p.querySelector(".p-type:checked").value,
+               name:p.querySelector(".p-name").value, rel:p.querySelector(".p-rel").value,
+               empid:p.querySelector(".p-empid").value, idno:p.querySelector(".p-idno").value,
+               age:p.querySelector(".p-age").value,
+               dy:p.querySelector(".p-dob-y").value, dm:p.querySelector(".p-dob-m").value, dd:p.querySelector(".p-dob-d").value };
+    })
+  };
+}
+function saveDraft(){ if(_restoring) return; try{ localStorage.setItem(DRAFT_KEY, JSON.stringify(serializeDraft())); showDraftHint(true); }catch(e){} }
+function scheduleSave(){ clearTimeout(_draftTimer); _draftTimer=setTimeout(saveDraft, 600); }
+function clearDraft(){ try{ localStorage.removeItem(DRAFT_KEY); }catch(e){} }
+function _setDob(y,m,d, ys,ms,ds){
+  if(!ys) return;
+  if(y){ ys.value=y; ys.dispatchEvent(new Event("change",{bubbles:true})); }
+  if(m){ ms.value=m; ms.dispatchEvent(new Event("change",{bubbles:true})); }
+  if(d){ ds.value=d; ds.dispatchEvent(new Event("change",{bubbles:true})); }
+}
+function restoreDraft(){
+  let d=null; try{ d=JSON.parse(localStorage.getItem(DRAFT_KEY)||"null"); }catch(e){}
+  if(!d || (d.t && Date.now()-d.t > DRAFT_TTL)){ if(d) clearDraft(); return; }
+  _restoring = true;
+  try{
+    _sv("emp_name",d.emp.name); _sv("emp_id",d.emp.empId); _sv("dept",d.emp.dept);
+    _sv("phone",d.emp.phone); _sv("emp_idno",d.emp.idno); _sv("email",d.emp.email); _sv("emp_age",d.emp.age);
+    _setDob(d.emp.dy,d.emp.dm,d.emp.dd, document.getElementById("emp_dob_y"),document.getElementById("emp_dob_m"),document.getElementById("emp_dob_d"));
+    if(d.emp.empId) fetchSubsidy(d.emp.empId);
+    if(d.room){ const r=document.querySelector('input[name="room"][value="'+d.room+'"]'); if(r){ r.checked=true; document.querySelectorAll(".room").forEach(x=>x.classList.remove("on")); r.closest(".room").classList.add("on"); } }
+    (d.people||[]).forEach(function(pd){
+      addPerson();
+      const card = peopleEl.lastElementChild;
+      if(pd.type==="employee"){ const er=card.querySelector('.p-type[value="employee"]'); er.checked=true; er.dispatchEvent(new Event("change",{bubbles:true})); }
+      card.querySelector(".p-name").value = pd.name||"";
+      card.querySelector(".p-rel").value = pd.rel||"";
+      card.querySelector(".p-empid").value = pd.empid||"";
+      card.querySelector(".p-idno").value = pd.idno||"";
+      card.querySelector(".p-age").value = pd.age||"";
+      _setDob(pd.dy,pd.dm,pd.dd, card.querySelector(".p-dob-y"),card.querySelector(".p-dob-m"),card.querySelector(".p-dob-d"));
+      if(pd.type==="employee" && pd.empid) fetchSubsidy(pd.empid);
+    });
+    occupancy = d.occupancy || null; roommate = d.roommate || "";
+  }catch(e){}
+  _restoring = false;
+  recalc();
+  showDraftHint(true);
+}
+document.getElementById("form").addEventListener("input", scheduleSave);
+document.getElementById("form").addEventListener("change", scheduleSave);
+document.getElementById("draftClear").addEventListener("click", function(){
+  if(!confirm(T("確定要清除已填寫的內容並重新開始嗎？"))) return;
+  clearDraft();
+  document.getElementById("form").reset();
+  document.querySelectorAll(".room").forEach(x=>x.classList.remove("on"));
+  document.getElementById("emp_age").innerHTML = ageOptions();
+  peopleEl.innerHTML=""; occupancy=null; roommate=""; recalc();
+  showDraftHint(false);
+});
+restoreDraft();
 </script>
 
+<!-- Google 網頁翻譯（印尼文／越南文，供外籍移工閱讀） -->
+<script>
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({pageLanguage:'zh-CN', includedLanguages:'id,vi,en', autoDisplay:false}, 'google_translate_element');
+}
+function setLang(lang){
+  // 以翻譯 cookie + 重新整理切換語言（最可靠，整頁含動態內容都會翻）
+  var ex='=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+  document.cookie='googtrans'+ex;
+  document.cookie='googtrans'+ex+';domain='+location.hostname;
+  document.cookie='googtrans'+ex+';domain=.'+location.hostname;
+  if(lang){
+    var val='/zh-CN/'+lang;
+    document.cookie='googtrans='+val+';path=/';
+    document.cookie='googtrans='+val+';path=/;domain='+location.hostname;
+  }
+  location.reload();
+}
+/* 重新整理後，依目前語言 cookie 標示對應按鈕 */
+(function(){
+  var m=document.cookie.match(/googtrans=([^;]+)/);
+  var cur=m?decodeURIComponent(m[1]).split('/').filter(Boolean).pop():'';
+  if(cur && cur!=='zh-TW'){ document.querySelectorAll('.langbtn').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-lang')===cur); }); }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
